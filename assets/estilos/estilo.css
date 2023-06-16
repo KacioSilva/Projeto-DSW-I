@@ -13,6 +13,9 @@
     --other-color: #fcfcfc;
     --h1-font: 4rem;
     --p-font:1rem;
+    --black-color: #000000;
+    --yellow-color: #ffff00;
+    --red-color: #ff0000;
 }
 body{
     background-color:#101113;
@@ -73,4 +76,117 @@ header{
 }
 .header-icons a:hover{
     color:var(--main-color)
+}
+.section{
+    padding: 0 15%;
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    
+}
+.home-text h1{
+   font-size: var(--h1-font);
+   line-height: 1.2;
+   margin-bottom: 2px;
+   margin-left: 15%;
+ 
+}
+.home-text h5{
+    color: #ffffff99;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    margin-left: 15%;
+}
+.home-text h3{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    margin-left: 15%;
+}
+.ip14{
+    max-width: 100%;
+    width: 25rem;
+    height: auto;
+    margin-left: 50%;
+}
+.btn{
+    display: inline-block;
+    margin-left: 15%;
+    padding: 15px 70px;
+    background-color: transparent;
+    border: solid 2px var(--tex-color); 
+    color: var(--tex-color)
+}
+.btn:hover{
+    background-color: var(--tex-color);
+    border: 2px solid var(--tex-color);
+    color: var(--black-color);
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.main li img{
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+}
+.row1{
+    background-color: var(--red-color);
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all.55s ease;
+    
+}
+.row1:hover {
+    transform: translateY(-8px);
+}
+.row2{
+    background-color: var(--black-color);
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all.55s ease;
+}
+.row2:hover {
+    transform: translateY(-8px);
+}
+.row3{
+    background-color: var(--yellow-color);
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all.55s ease;
+}
+.row3:hover {
+    transform: translateY(-8px);
 }
