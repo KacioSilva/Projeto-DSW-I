@@ -2,40 +2,90 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
-    <link rel="stylesheet" href="/assets/estilos/estilo.css">
-    <!--------------------------PUXANDO OS ICONES BOX-->
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <!-- or -->
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-     <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-     <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/estilos/teste.css">
+
+    <title>Responsive Footer</title>
 </head>
-<body> 
+<body>
     <main>
-        <header>    
-            <a class="logo" href="home.html"><i class='bx bx-store-alt'></i>Mercado IFPE</a>
-            <ul class="navegacao">
-                <li>  <!------NAVEGAÇÃO------->
-                    <a href="#">Contato</a>
+        
+    </main>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Logo</h1>
+                <p>It's all about your dreams.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
                 </li>
                 <li>
-                    <a href="#">Produtos</a>
+                    <a href="#" class="footer-link">Tech</a>
                 </li>
                 <li>
-                    <a href="sobre.html">Sobre</a>
+                    <a href="#" class="footer-link">Adventures</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Music</a>
                 </li>
             </ul>
-            <div class="header-icons">
-                <a href="#"><i class='bx bx-cart'></i></a>
-                <a href="#"><i class='bx bx-menu'></i></a></a>   
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Products</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">App</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Desktop</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Cloud</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Subscribe</h3>
+
+                <p>
+                    Enter your e-mail to get notified about
+                    our news solutions
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
             </div>
-        </header>
-    </main>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2023 all rights reserved
+        </div>
+    </footer>
 </body>
+</html>

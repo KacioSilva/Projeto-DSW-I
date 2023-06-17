@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado IFPE</title>
     <link rel="stylesheet" href="/assets/estilos/estilo.css">
+    <script src="/script/transicaoImagens.js"></script>
     <!--------------------------PUXANDO OS ICONES BOX-->
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -18,7 +19,6 @@
      <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
 </head>
 <body> 
-    <main>
         <header>    
             <a class="logo" href="home.html"><i class='bx bx-store-alt'></i>Mercado IFPE</a>
             <ul class="navegacao">
@@ -37,40 +37,60 @@
                 <a href="#"><i class='bx bx-menu'></i></a></a>   
             </div>
         </header>
-        <section class="home">
-            <div class="home-img">
-                <img src="/assets/images/imageGeral/ip14.png" alt="iphone 14" title="iphone 14" class="ip14">
+        <main>
+            <section class="home">
+                <div class="home-img">
+                    <img src="/assets/images/imageGeral/ip14.png" alt="iphone 14" title="iphone 14" class="ip14">
+                </div>
+                <div class="home-text">
+                    <h1>Apple<br>Iphone 14</h1>
+                    <h5>A mais nova linha iPhone</h5>
+                    <h3>R$4.000</h3>
+                    <a href="#" class="btn">Compre Agora</a>
+                </div>
+            </section>
+            <div class="main">
+                <div class="row1">
+                    <l1><img src="/assets/images/imageRow/ipVermelho.png" onclick="slider('/assets/images/imageGeral/ip-vermelho.png')"> </l1> 
+                </div>
+                <div class="row2">
+                    <l1><img src="/assets/images/imageRow/ipPreto.png" onclick="slider('/assets/images/imageGeral/ip-preto.png')"> </l1> 
+                </div>
+                <div class="row3">
+                    <l1><img src="/assets/images/imageRow/ipAmarelo.png" onclick="slider('/assets/images/imageGeral/ip-amarelo.png')"> </l1> 
+                </div>
             </div>
-            <div class="home-text">
-                <h1>Apple<br>Iphone 14</h1>
-                <h5>A mais nova linha iPhone</h5>
-                <h3>R$4.000</h3>
-                <a href="#" class="btn">Compre Agora</a>
-            </div>
+        </main>
+        <section>
+            <footer>
+                <div class="container">
+                    <ul>
+                        <h3>Mercado IFPE</h3>
+                        <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico ou acessório.</p>
+                        <div class="redesSociais">
+                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/facebook.png" alt="facebook" title="facebook"></a>
+                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/instagram.png" alt="instagram" title="instagram"></a>
+                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/twitter.png" alt="twitter" title="twitter"></a>
+                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/whatsapp.png" alt="whatsapp" tittle="whatsapp"></a>
+                        </div>
+                    </ul>
+                    <ul>
+                        <h3>Link</h3>
+                        <l1><a href="#">Tela Inicial</a></l1>
+                        <l1><a href="#">Contato</a></l1>
+                        <l1><a href="#">Produtos</a></l1>
+                        <l1><a href="#">Criar Conta</a></l1>
+                        <l1><a href="#">Sobre</a></l1>
+                    </ul>
+                    <ul>
+                        <h3>Suporte</h3>
+                        <l1><a href="#">Como Funciona</a></l1>
+                        <l1><a href="#">Contato</a></l1>
+                        <l1><a href="#">Características</a></l1>
+                    </ul>
+                    <ul>Nos Contate</ul>
+                </div>
+            </footer>
         </section>
-        <div class="main">
-            <div class="row1">
-                <l1><img src="/assets/images/imageRow/ipVermelho.png" onclick="slider('/assets/images/imageGeral/ip-vermelho.png')"> </l1> 
-            </div>
-            <div class="row2">
-                <l1><img src="/assets/images/imageRow/ipPreto.png" onclick="slider('/assets/images/imageGeral/ip-preto.png')"> </l1> 
-            </div>
-            <div class="row3">
-                <l1><img src="/assets/images/imageRow/ipAmarelo.png" onclick="slider('/assets/images/imageGeral/ip-amarelo.png')"> </l1> 
-            </div>
-        </div>
-    </main>
-    <script>
-        function slider (anything){
-            document.querySelector ('.ip14') .src = anything;
-        };
-
-       let menu = document.querySelector ('#menu-icon');
-       let navbar = document.querySelector ('.navbar');
-
-       menu.onclick = () => {
-        menu.classList.toggle ('bx-x');
-        navbar.classList.toggle ('open');
-       }
-    </script>
-</body>
+    </body>
+</html>
