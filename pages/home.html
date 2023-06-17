@@ -3,94 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado IFPE</title>
     <link rel="stylesheet" href="/assets/estilos/estilo.css">
-    <script src="/script/transicaoImagens.js"></script>
-    <!--------------------------PUXANDO OS ICONES BOX-->
+    <title>Home</title>
+
+    <!--IMPORTANDO O ICONEBOX-->
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <!-- or -->
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--IMPORTANDO O ICONEBOX-->
      <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
      <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
 </head>
-<body> 
-        <header>    
-            <a class="logo" href="home.html"><i class='bx bx-store-alt'></i>Mercado IFPE</a>
-            <ul class="navegacao">
-                <li>  <!------NAVEGAÇÃO------->
-                    <a href="#">Contato</a>
+<body>
+    <header>
+        <nav>
+            <h1>
+                <a href="#" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a></h1>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="home-text">
+            <h1>Apple<br>Iphone 14</h1>
+            <h5>A mais nova linha iPhone</h5>
+            <h3>R$4.000</h3>
+            <a href="#" class="btn">Compre Agora</a>
+        </div>
+    </main>
+    <script src="/script/navbar.js"></script>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Mercado IFPE</h1>
+                <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <h3>Link</h3>
+                <li>
+                    <a href="#" class="footer-link">Tela Inicial</a>
                 </li>
                 <li>
-                    <a href="#">Produtos</a>
+                    <a href="#" class="footer-link">Contato</a>
                 </li>
                 <li>
-                    <a href="sobre.html">Sobre</a>
+                    <a href="#" class="footer-link">Produtos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Criar Conta</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sobre</a>
                 </li>
             </ul>
-            <div class="header-icons">
-                <a href="#"><i class='bx bx-cart'></i></a>
-                <a href="#"><i class='bx bx-menu'></i></a></a>   
-            </div>
-        </header>
-        <main>
-            <section class="home">
-                <div class="home-img">
-                    <img src="/assets/images/imageGeral/ip14.png" alt="iphone 14" title="iphone 14" class="ip14">
-                </div>
-                <div class="home-text">
-                    <h1>Apple<br>Iphone 14</h1>
-                    <h5>A mais nova linha iPhone</h5>
-                    <h3>R$4.000</h3>
-                    <a href="#" class="btn">Compre Agora</a>
-                </div>
-            </section>
-            <div class="main">
-                <div class="row1">
-                    <l1><img src="/assets/images/imageRow/ipVermelho.png" onclick="slider('/assets/images/imageGeral/ip-vermelho.png')"> </l1> 
-                </div>
-                <div class="row2">
-                    <l1><img src="/assets/images/imageRow/ipPreto.png" onclick="slider('/assets/images/imageGeral/ip-preto.png')"> </l1> 
-                </div>
-                <div class="row3">
-                    <l1><img src="/assets/images/imageRow/ipAmarelo.png" onclick="slider('/assets/images/imageGeral/ip-amarelo.png')"> </l1> 
-                </div>
-            </div>
-        </main>
-        <section>
-            <footer>
-                <div class="container">
-                    <ul>
-                        <h3>Mercado IFPE</h3>
-                        <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico ou acessório.</p>
-                        <div class="redesSociais">
-                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/facebook.png" alt="facebook" title="facebook"></a>
-                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/instagram.png" alt="instagram" title="instagram"></a>
-                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/twitter.png" alt="twitter" title="twitter"></a>
-                                <a href="#" class="botaoRedeSocial"><img src="/assets/images/imageRedesSociais/whatsapp.png" alt="whatsapp" tittle="whatsapp"></a>
-                        </div>
-                    </ul>
-                    <ul>
-                        <h3>Link</h3>
-                        <l1><a href="#">Tela Inicial</a></l1>
-                        <l1><a href="#">Contato</a></l1>
-                        <l1><a href="#">Produtos</a></l1>
-                        <l1><a href="#">Criar Conta</a></l1>
-                        <l1><a href="#">Sobre</a></l1>
-                    </ul>
-                    <ul>
-                        <h3>Suporte</h3>
-                        <l1><a href="#">Como Funciona</a></l1>
-                        <l1><a href="#">Contato</a></l1>
-                        <l1><a href="#">Características</a></l1>
-                    </ul>
-                    <ul>Nos Contate</ul>
-                </div>
-            </footer>
-        </section>
-    </body>
+
+            <ul class="footer-list">
+                <h3>Suporte</h3>
+                <li>
+                    <a href="#" class="footer-link">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Características</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_copyright">
+            <p>&#169 2023 all rights reserved</p>
+        </div>
+    </footer>
+</body>
 </html>
