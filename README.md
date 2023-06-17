@@ -1,2 +1,2 @@
-Repositório e exercícios de Desenvolvimento Web 1
+Link para visualização do projeto:
 * [MercadoIFPE](https://kaciosilva.github.io/MercadoIFPE/pages/home.html) 
