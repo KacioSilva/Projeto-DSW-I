@@ -64,7 +64,7 @@ main {
 
 .nav-list li {
     letter-spacing: 3px;
-    margin-right: 100px;
+    margin: 0 30px;
 
 }
 
@@ -80,12 +80,11 @@ main {
     margin: 8px;
     transition: 0.3s;
 }
-
+/*-------------MEDIA PARA AJUSTAR O BOTÃO MENU---------------*/
 @media screen and (max-width: 999px) {
     body {
         overflow-x: hidden;
     }
-
     .nav-list {
         position: absolute;
         top: 8vh;
@@ -118,7 +117,7 @@ main {
 .nav-list.active {
     transform: translateX(0);
 }
-
+/*---------------------------------------------*/
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -185,6 +184,7 @@ footer{
     font-weight: 100;
     background-color:#1e1e2b;
 }
+/*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
 @media (max-width: 999px) {
     #footer_content {
         grid-template-columns: repeat(1, 2fr);
@@ -192,5 +192,141 @@ footer{
     }
     .footer-list{
         margin: 0;
+    }
+}/*---------------------------------------------*/
+
+/*----------------MAIN---------------*/
+.main{
+    display: flex;
+}
+.home-text{
+color:var(--tex-color);
+font-weight: 700;
+margin-left: 52rem;
+margin-top: 20rem;
+letter-spacing: 2;
+}
+
+.home-text h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.home-text h3{
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+.home-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.btn-compre-agora{
+    display: inline-block;
+    padding: 15px 70px;
+    background-color: transparent;
+    border: solid 2px var(--tex-color); 
+    transition: all.55s ease;
+}
+.btn-compre-agora:hover{
+    transform: translateY(-10px);
+}
+
+.imagem-principal{
+    max-width: 100vh;
+    width: auto;
+    height: auto;
+    display: flex;
+    
+}
+.ip-14{
+    width:20rem;
+    height: 26rem;
+    margin-left: -45rem;
+    margin-top: 16rem;
+    display: flex;
+}
+/*------------ BOTÕES PARA MUDAR A COR DO IPHONE -----------------*/
+.row{
+    position: absolute;
+    top: 53%;
+    left: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.row li img{
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+}
+.row1{
+    background-color: var(--red-color);
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all.55s ease;
+    
+}
+.row1:hover {
+    transform: translateY(-8px);
+}
+.row2{
+    background-color: var(--black-color);
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all.55s ease;
+}
+.row2:hover {
+    transform: translateY(-8px);
+}
+.row3{
+    background-color: var(--yellow-color);
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all.55s ease;
+}
+.row3:hover {
+    transform: translateY(-8px);
+}
+
+@media (max-width: 1150px){
+    .home-text{
+        margin-left: 2rem;
+        font-size: 22px;
+    }
+    .home-text h1{
+        font-size: 35px;
+    }
+    .home-text h3{
+        font-size: 35px;
+    }
+    .btn-compre-agora{
+        padding: 15px 50px;
+    }
+    .ip-14{
+        margin-left: 10rem;
+        margin-top: 12rem;
+    }
+    .row{
+        flex-direction: row;
+        top: 90%;
+        left: 42%;
+        align-items: center;
+        
     }
 }
