@@ -1,5 +1,5 @@
 function slider (anything){
-    document.querySelector ('.ip14') .src = anything;
+    document.querySelector ('.ip-14') .src = anything;
 };
 
 let menu = document.querySelector ('#menu-icon');
