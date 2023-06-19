@@ -1,3 +1,8 @@
+
+.models {
+    display:none;
+}
+
 .produto-item--img img{
     width: 5rem;
 }
@@ -17,3 +22,83 @@
 .produtoBig img{
     width: 5rem;
 }
+aside {
+    background-color:#ffcdd2;
+    width:0vw;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    transition:all ease .2s;
+    overflow-x:hidden;
+}
+aside.show {
+    width:30vw;
+}
+main {
+    flex:1;
+    padding:20px;
+    margin-top:60px;
+}
+.produto-area {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.produtoWindowArea {
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.5);
+    display:none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto;
+}
+.produtoWindowBody {
+    width:900px;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    margin:20px 0px;
+}
+.produto-item--add {
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:25px;
+    background-color:#d32f2f;
+    text-align:center;
+    color:#FFF;
+    font-size:22px;
+    cursor:pointer;
+    margin-top:-25px;
+    transition:all ease .2s;
+}
+.produtoInfo--sizes {
+    display:inline-flex;
+    border-radius:10px;
+    overflow:hidden;
+}
+.produtoInfo--size {
+    padding:10px 15px;
+    color:#000;
+    background-color:#EEE;
+    font-size:13px;
+    font-weight: bold;
+    cursor:pointer;
+}
+.produtoInfo--sector {
+    color:blue;
+    text-transform: uppercase;
+    font-size:14px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.produtoInfo--size.selected {
+    background-color:#d32f2f;
+}
+
+
