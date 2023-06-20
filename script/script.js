@@ -40,6 +40,7 @@ produtoJson.map((item, index) => {
     const botoesFechar = () => {
         //para fazer com que tanto o voltar e o fechar funcionem com a mesma funcionalidade
         selecionaTodos('.produtoInfo--cancelButton, .produtoInfo--cancelMobileButton').forEach((item) => {
+            quantProdutos = 1
             item.addEventListener('click', fecharModal)
         })
     }
@@ -107,7 +108,66 @@ produtoJson.map((item, index) => {
             }
         })
     }
+    const adicionarAoCarrinho = () =>{
+        seleciona('.produtoInfo--addButton').addEventListener('click', ()=>{
+            console.log('Adicionar no carrinho')
+            console.log('Produto' + modalKey)
 
+            let size = seleciona('.produtoInfo--size.selected').getAttribute('data-key')
+            console.log('Tamanho' + size)
+
+            console.log('Quantidade' + quantProdutos)
+
+            let price = seleciona('.produtoInfo--actualPrice').innerHTML.replace('R$&nbsp;','')
+
+            let identificador = produtoJson[modalKey].id+'t'+size
+
+            let key = cart.findIndex((item) => item.identificador == identificador)
+            console.log(key)
+
+            if(key > -1){
+                cart[key].qt += quantProdutos
+            }
+            else{
+                let produto ={
+                    identificador,
+                    id: produtoJson[modalKey].id,
+                    size,
+                    qt: quantProdutos,
+                    price: parseFloat(price)
+                }
+                cart.push(produto)
+                console.log(produto)
+                console.log('sub total R$ ' + (produto.qt * produto.price).toFixed(2))
+            }
+            fecharModal()
+            abrirCarrinho()
+            adicionarAoCarrinho()
+        })
+    }
+    const abrirCarrinho = () => {
+        console.log('Qtd de itens no carrinho ' + cart.length)
+        if(cart.length > 0) {
+            // mostrar o carrinho
+            seleciona('aside').classList.add('show')
+            seleciona('header').style.display = 'flex' // mostrar barra superior
+        }
+    
+        // exibir aside do carrinho no modo mobile
+        seleciona('.menu-openner').addEventListener('click', () => {
+            if(cart.length > 0) {
+                seleciona('aside').classList.add('show')
+                seleciona('aside').style.left = '0'
+            }
+        })
+    }
+    const fecharCarrinho = () => {
+    // fechar o carrinho com o botão X no modo mobile
+    seleciona('.menu-closer').addEventListener('click', () => {
+        seleciona('aside').style.left = '100vw' // usando 100vw ele ficara fora da tela
+        seleciona('header').style.display = 'flex'
+    })
+}
 
     //preenchendo os dados de cada celular
     preencherDadosProdutos(produtoItem, item, index)
@@ -121,7 +181,8 @@ produtoJson.map((item, index) => {
         preencherModal()     
         preencherTamanhos(chave)
         escolherTamanhoPreco(chave)
-        mudarQuantidade()
+        seleciona('.produtoInfo--qt').innerHTML = quantProdutos
+        adicionarAoCarrinho()
 
     })
     
@@ -131,4 +192,5 @@ produtoJson.map((item, index) => {
         //console.log('clicou no produto')
         botoesFechar()
     })
+    mudarQuantidade()
 })

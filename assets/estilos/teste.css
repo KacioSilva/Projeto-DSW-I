@@ -100,5 +100,33 @@ main {
 .produtoInfo--size.selected {
     background-color:#d32f2f;
 }
+header {
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    height:60px;
+    background-color:#d32f2f;
+    display:flex; /* none; */
+    justify-content:space-between; /* flex-end; */
+    align-items: center;
+}
+aside {
+    background-color:#ffcdd2;
+    width:0vw;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    transition:all ease .2s;
+    overflow-x:hidden;
+}
 
+aside.show {
+    width:30vw;
+}
+.cart--area {
+    margin-top: 30px; /* ajuste */
+    padding:20px;
+}
 
+.cart--area h1 {
+    display: relative;
+}
