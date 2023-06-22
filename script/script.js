@@ -7,6 +7,8 @@ let quantprodutos = 1
 
 let cart = [] // carrinho
 
+
+// funcoes auxiliares ou uteis
 const seleciona = (elemento) => document.querySelector(elemento)
 const selecionaTodos = (elemento) => document.querySelectorAll(elemento)
 
@@ -15,43 +17,40 @@ const formatoReal = (valor) => {
 }
 
 const formatoMonetario = (valor) => {
-    if (valor) {
+    if(valor) {
         return valor.toFixed(2)
     }
 }
 
 const abrirModal = () => {
-    seleciona('.produtoWindowArea').style.opacity = 1 // transparente
+    seleciona('.produtoWindowArea').style.opacity = 0 // transparente
     seleciona('.produtoWindowArea').style.display = 'flex'
-    setTimeout(() => {
-        seleciona('.produtoWindowArea').opacity = 0
-     }, 150)
+    setTimeout(() => seleciona('.produtoWindowArea').style.opacity = 1, 150)
 }
 
 const fecharModal = () => {
-    seleciona('.produtoWindowArea').style.opacity = 1 // transparente
-    setTimeout(() =>{
-        seleciona('.produtoWindowArea').style.display = 'none'
-    }, 50)
+    seleciona('.produtoWindowArea').style.opacity = 0 // transparente
+    setTimeout(() => seleciona('.produtoWindowArea').style.display = 'none', 500)
 }
 
 const botoesFechar = () => {
-    // FECHAR O MODAL TANTO DESKTOP QUANTO MOBILE
-    selecionaTodos('.produtoInfo--cancelButton, .produtoInfo--cancelMobileButton').forEach((item) => item.addEventListener('click', fecharModal))
+    // BOTOES FECHAR MODAL
+    selecionaTodos('.produtoInfo--cancelButton, .produtoInfo--cancelMobileButton').forEach( (item) => item.addEventListener('click', fecharModal) )
 }
 
-const preencheProdutos = (produtoItem, item, index) => {
+const preencheDadosDasprodutos = (produtoItem, item, index) => {
+   
     // setar um atributo para identificar qual elemento foi clicado
+	produtoItem.setAttribute('data-key', index)
     produtoItem.querySelector('.produto-item--img img').src = item.img
-    produtoItem.querySelector('.produto-item--name').innerHTML = item.name
     produtoItem.querySelector('.produto-item--price').innerHTML = formatoReal(item.price[2])
+    produtoItem.querySelector('.produto-item--name').innerHTML = item.name
     produtoItem.querySelector('.produto-item--desc').innerHTML = item.description
-    produtoItem.setAttribute('data-key', index)
 }
 
-const preencheModal = (item) => {
-    seleciona('.produtoInfo h1').innerHTML = item.name
+const preencheDadosModal = (item) => {
     seleciona('.produtoBig img').src = item.img
+    seleciona('.produtoInfo h1').innerHTML = item.name
     seleciona('.produtoInfo--desc').innerHTML = item.description
     seleciona('.produtoInfo--actualPrice').innerHTML = formatoReal(item.price[2])
 }
@@ -110,9 +109,9 @@ const mudarQuantidade = () => {
     })
 
     seleciona('.produtoInfo--qtmenos').addEventListener('click', () => {
-        if (quantprodutos > 1) {
+        if(quantprodutos > 1) {
             quantprodutos--
-            seleciona('.produtoInfo--qt').innerHTML = quantprodutos
+            seleciona('.produtoInfo--qt').innerHTML = quantprodutos	
         }
     })
 }
@@ -122,26 +121,26 @@ const adicionarNoCarrinho = () => {
         console.log('Adicionar no carrinho')
 
         // pegar dados da janela modal atual
-        // qual produto? pegue o modalKey para usar produtoJson[modalKey]
-        console.log("produto " + modalKey)
-        // tamanho
-        let size = seleciona('.produtoInfo--size.selected').getAttribute('data-key')
-        console.log("Tamanho " + size)
-        // quantidade
-        console.log("Quant. " + quantprodutos)
+    	// qual produto? pegue o modalKey para usar produtoJson[modalKey]
+    	console.log("produto " + modalKey)
+    	// tamanho
+	    let size = seleciona('.produtoInfo--size.selected').getAttribute('data-key')
+	    console.log("Tamanho " + size)
+	    // quantidade
+    	console.log("Quant. " + quantprodutos)
         // preco
         let price = seleciona('.produtoInfo--actualPrice').innerHTML.replace('R$&nbsp;', '')
-
+    
         // crie um identificador que junte id e tamanho
-        // concatene as duas informacoes separadas por um símbolo, vc escolhe
-        let identificador = produtoJson[modalKey].id + 't' + size
+	    // concatene as duas informacoes separadas por um símbolo, vc escolhe
+	    let identificador = produtoJson[modalKey].id+'t'+size
 
         // antes de adicionar verifique se ja tem aquele codigo e tamanho
         // para adicionarmos a quantidade
-        let key = cart.findIndex((item) => item.identificador == identificador)
+        let key = cart.findIndex( (item) => item.identificador == identificador )
         console.log(key)
 
-        if (key > -1) {
+        if(key > -1) {
             // se encontrar aumente a quantidade
             cart[key].qt += quantprodutos
         } else {
@@ -166,15 +165,15 @@ const adicionarNoCarrinho = () => {
 
 const abrirCarrinho = () => {
     console.log('Qtd de itens no carrinho ' + cart.length)
-    if (cart.length > 0) {
+    if(cart.length > 0) {
         // mostrar o carrinho
-        seleciona('aside').classList.add('show')
-        
+	    seleciona('aside').classList.add('show')
+        seleciona('header').style.display = 'flex' // mostrar barra superior
     }
 
     // exibir aside do carrinho no modo mobile
     seleciona('.menu-openner').addEventListener('click', () => {
-        if (cart.length > 0) {
+        if(cart.length > 0) {
             seleciona('aside').classList.add('show')
             seleciona('aside').style.left = '0'
         }
@@ -185,96 +184,97 @@ const fecharCarrinho = () => {
     // fechar o carrinho com o botão X no modo mobile
     seleciona('.menu-closer').addEventListener('click', () => {
         seleciona('aside').style.left = '100vw' // usando 100vw ele ficara fora da tela
+        seleciona('header').style.display = 'flex'
     })
 }
 
 const atualizarCarrinho = () => {
     // exibir número de itens no carrinho
-    seleciona('.menu-openner span').innerHTML = cart.length
+	seleciona('.menu-openner span').innerHTML = cart.length
+	
+	// mostrar ou nao o carrinho
+	if(cart.length > 0) {
 
-    // mostrar ou nao o carrinho
-    if (cart.length > 0) {
+		// mostrar o carrinho
+		seleciona('aside').classList.add('show')
 
-        // mostrar o carrinho
-        seleciona('aside').classList.add('show')
-
-        // zerar meu .cart para nao fazer insercoes duplicadas
-        seleciona('.cart').innerHTML = ''
+		// zerar meu .cart para nao fazer insercoes duplicadas
+		seleciona('.cart').innerHTML = ''
 
         // crie as variaveis antes do for
-        let subtotal = 0
-        let desconto = 0
-        let total = 0
+		let subtotal = 0
+		let desconto = 0
+		let total    = 0
 
         // para preencher os itens do carrinho, calcular subtotal
-        for (let i in cart) {
-            // use o find para pegar o item por id
-            let produtoItem = produtoJson.find((item) => item.id == cart[i].id)
-            console.log(produtoItem)
+		for(let i in cart) {
+			// use o find para pegar o item por id
+			let produtoItem = produtoJson.find( (item) => item.id == cart[i].id )
+			console.log(produtoItem)
 
             // em cada item pegar o subtotal
-            subtotal += cart[i].price * cart[i].qt
+        	subtotal += cart[i].price * cart[i].qt
             //console.log(cart[i].price)
 
-            // fazer o clone, exibir na telas e depois preencher as informacoes
-            let cartItem = seleciona('.models .cart--item').cloneNode(true)
-            seleciona('.cart').append(cartItem)
+			// fazer o clone, exibir na telas e depois preencher as informacoes
+			let cartItem = seleciona('.models .cart--item').cloneNode(true)
+			seleciona('.cart').append(cartItem)
 
-            let produtoSizeName = cart[i].size
+			let produtoSizeName = cart[i].size
 
-            let produtoName = `${produtoItem.name} (${produtoSizeName})`
+			let produtoName = `${produtoItem.name} (${produtoSizeName})`
 
-            // preencher as informacoes
-            cartItem.querySelector('img').src = produtoItem.img
-            cartItem.querySelector('.cart--item-nome').innerHTML = produtoName
-            cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt
+			// preencher as informacoes
+			cartItem.querySelector('img').src = produtoItem.img
+			cartItem.querySelector('.cart--item-nome').innerHTML = produtoName
+			cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt
 
-            // selecionar botoes + e -
-            cartItem.querySelector('.cart--item-qtmais').addEventListener('click', () => {
-                console.log('Clicou no botão mais')
-                // adicionar apenas a quantidade que esta neste contexto
-                cart[i].qt++
-                // atualizar a quantidade
-                atualizarCarrinho()
-            })
+			// selecionar botoes + e -
+			cartItem.querySelector('.cart--item-qtmais').addEventListener('click', () => {
+				console.log('Clicou no botão mais')
+				// adicionar apenas a quantidade que esta neste contexto
+				cart[i].qt++
+				// atualizar a quantidade
+				atualizarCarrinho()
+			})
 
-            cartItem.querySelector('.cart--item-qtmenos').addEventListener('click', () => {
-                console.log('Clicou no botão menos')
-                if (cart[i].qt > 1) {
-                    // subtrair apenas a quantidade que esta neste contexto
-                    cart[i].qt--
-                } else {
-                    // remover se for zero
-                    cart.splice(i, 1)
-                }
+			cartItem.querySelector('.cart--item-qtmenos').addEventListener('click', () => {
+				console.log('Clicou no botão menos')
+				if(cart[i].qt > 1) {
+					// subtrair apenas a quantidade que esta neste contexto
+					cart[i].qt--
+				} else {
+					// remover se for zero
+					cart.splice(i, 1)
+				}
 
-                
+                (cart.length < 1) ? seleciona('header').style.display = 'flex' : ''
 
-                // atualizar a quantidade
-                atualizarCarrinho()
-            })
+				// atualizar a quantidade
+				atualizarCarrinho()
+			})
 
-            seleciona('.cart').append(cartItem)
+			seleciona('.cart').append(cartItem)
 
-        } // fim do for
+		} // fim do for
 
-        // fora do for
-        // calcule desconto 10% e total
-        //desconto = subtotal * 0.1
-        desconto = subtotal * 0
-        total = subtotal - desconto
+		// fora do for
+		// calcule desconto 10% e total
+		//desconto = subtotal * 0.1
+		desconto = subtotal * 0
+		total = subtotal - desconto
 
-        // exibir na tela os resultados
-        // selecionar o ultimo span do elemento
-        seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal)
-        seleciona('.desconto span:last-child').innerHTML = formatoReal(desconto)
-        seleciona('.total span:last-child').innerHTML = formatoReal(total)
+		// exibir na tela os resultados
+		// selecionar o ultimo span do elemento
+		seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal)
+		seleciona('.desconto span:last-child').innerHTML = formatoReal(desconto)
+		seleciona('.total span:last-child').innerHTML    = formatoReal(total)
 
-    } else {
-        // ocultar o carrinho
-        seleciona('aside').classList.remove('show')
-        seleciona('aside').style.left = '100vw'
-    }
+	} else {
+		// ocultar o carrinho
+		seleciona('aside').classList.remove('show')
+		seleciona('aside').style.left = '100vw'
+	}
 }
 
 const finalizarCompra = () => {
@@ -282,40 +282,48 @@ const finalizarCompra = () => {
         console.log('Finalizar compra')
         seleciona('aside').classList.remove('show')
         seleciona('aside').style.left = '100vw'
+        seleciona('header').style.display = 'flex'
     })
 }
 
 
+
 // MAPEAR produtoJson para gerar lista de produtos
-produtoJson.map((item, index) => {
-    
+produtoJson.map((item, index ) => {
+    //console.log(item)
     let produtoItem = document.querySelector('.models .produto-item').cloneNode(true)
+    //console.log(produtoItem)
+    //document.querySelector('.produto-area').append(produtoItem)
     seleciona('.produto-area').append(produtoItem)
 
     // preencher os dados de cada produto
-    preencheProdutos(produtoItem, item, index)
-
+    preencheDadosDasprodutos(produtoItem, item, index)
+    
     // produto clicada
     produtoItem.querySelector('.produto-item a').addEventListener('click', (e) => {
         e.preventDefault()
         console.log('Clicou na produto')
 
+     
         let chave = pegarKey(e)
+       
 
         // abrir janela modal
         abrirModal()
 
         // preenchimento dos dados
-        preencheModal(item)
+        preencheDadosModal(item)
 
+      
         // pegar tamanho selecionado
         preencherTamanhos(chave)
 
-        // definir quantidade inicial como 1
-        seleciona('.produtoInfo--qt').innerHTML = quantprodutos
+		// definir quantidade inicial como 1
+		seleciona('.produtoInfo--qt').innerHTML = quantprodutos
 
         // selecionar o tamanho e preco com o clique no botao
         escolherTamanhoPreco(chave)
+        
 
     })
 
@@ -323,8 +331,11 @@ produtoJson.map((item, index) => {
 
 }) // fim do MAPEAR produtoJson para gerar lista de produtos
 
+
 // mudar quantidade com os botoes + e -
 mudarQuantidade()
+
+
 
 adicionarNoCarrinho()
 atualizarCarrinho()

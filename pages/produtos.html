@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="stylesheet" href="/assets/estilos/estilo.css"> 
     <link rel="stylesheet" href="/assets/estilos/produtos.css">
     
    
@@ -29,22 +28,24 @@
     <!-- .menu-openner aparecera no modo mobile -->
     <header>
         <nav>
-            <h1>
-                <a href="home.html" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a>
-            </h1>
+            <h1><a href="home.html" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a></h1>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
+            
             <ul class="nav-list">
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Login</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a class="menu-openner"><span>0</span>🛒</a></li>
             </ul>
         </nav>
+        <div class="menu-openner">
+            <span>0</span>🛒
+        </div>
+        
     </header>
     <!-- modelos de produto na lista e no carrinho -->
     <div class="models">
@@ -144,69 +145,10 @@
         </div>
     </div>
     <!-- /janela modal .produtoWindowArea -->
-    <footer>
-        <div id="footer_content">
-            <div id="footer_contacts">
-                <h1>Mercado IFPE</h1>
-                <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
-
-                <div id="footer_social_media">
-                    <a href="#" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#" class="footer-link" id="facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a href="#" class="footer-link" id="whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="#" class="footer-link" id="twitter">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-
-            <ul class="footer-list">
-                <h3>Link</h3>
-                <li>
-                    <a href="home.html" class="footer-link">Tela Inicial</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Contato</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Produtos</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Criar Conta</a>
-                </li>
-                <li>
-                    <a href="sobre.html" class="footer-link">Sobre</a>
-                </li>
-            </ul>
-
-            <ul class="footer-list">
-                <h3>Suporte</h3>
-                <li>
-                    <a href="#" class="footer-link">Como Funciona</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Contato</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Características</a>
-                </li>
-            </ul>
-        </div>
-        <div id="footer_copyright">
-            <p>&#169 2023 all rights reserved</p>
-        </div>
-    </footer>
 
     <script src="/script/produtos.js"></script>
     <script src="/script/script.js"></script>
+    <script src="/script/navbar.js"></script>
 
 </body>
 
