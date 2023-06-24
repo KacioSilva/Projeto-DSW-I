@@ -4,6 +4,51 @@
     box-sizing: border-box;
     font-family: 'Poppins';
 }
+footer{
+    bottom: 0px;
+	width: 100%;
+    color: white;
+    background-color: red;
+    
+} 
+#footer_content{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem;
+    min-height: 100vh;
+    
+}
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link i {
+    font-size: 1.50rem;    
+}
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    margin-left: 16rem;
+}
+
+#footer_copyright {
+    display: flex;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+    background-color:#1e1e2b;
+}
 
 body {
     background-color:#EEE;
@@ -36,8 +81,11 @@ header a{
     text-decoration: none;
 
 }
+a:hover{
+    color:aqua;
+}
 .logo {
-    font-size: 4vh;
+    font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -55,17 +103,16 @@ nav {
     list-style: none;
     display: flex;
 }
-.nav-list li {
+.nav-list li{
     position: relative;
     margin-left: 10px;
     letter-spacing: 3px;
-    
-
 }
 
 .mobile-menu {
     display: none;
     cursor: pointer;
+    margin-left: 0rem;
     
 }
 
@@ -77,17 +124,17 @@ nav {
     transition: 0.3s;
 }
 /*-------------MEDIA PARA AJUSTAR O BOTÃO MENU---------------*/
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 860px) {
     body {
         z-index: 1;
         overflow-x: hidden;
     }
     .nav-list {
         position: absolute;
-        top: 8vh;
+        top: 2.83rem;
         right: 0;
         width: 25vw;
-        height: 92vh;
+        height: 100vh;
         background: #23232e;
         flex-direction: column;
         align-items: center;
@@ -99,17 +146,14 @@ nav {
     .nav-list li {
         margin-left: 0;
         opacity: 0;
+        letter-spacing: 3px;
+        margin-right: 50px;
     }
 
     .mobile-menu {
         display: block;
-       
     }
-    .nav-list li {
-        letter-spacing: 3px;
-        margin-right: 10px;
-    
-    }
+   
 }
 
 .nav-list.active {
@@ -213,16 +257,17 @@ h1, h2 {
 }
 
 .produto-item--img {
-    width:200px;
-    height:200px;
+    width:250px;
+    height:250px;
     background-color:#EEE;
-    border-radius:100px;
+    border-radius:400px;
     box-shadow:0px 10px 50px rgba(0, 0, 0, 0.2);
 }
 
 .produto-item--img img {
-    width:100%;
+    width:50%;
     height:auto;
+    margin-top: 2rem;
 }
 
 .produto-item--add {
@@ -235,7 +280,7 @@ h1, h2 {
     color:#FFF;
     font-size:22px;
     cursor:pointer;
-    margin-top:70px;
+    margin-top:20px;
     transition:all ease .2s;
 }
 
@@ -513,7 +558,7 @@ h1, h2 {
     }
 }
 
-@media (max-width:840px) {
+@media (max-width:860px) {
     body {
         flex-direction: column;
     }
@@ -526,11 +571,6 @@ h1, h2 {
     header {
         display:flex;
     }
-    /*
-    main {
-        padding-top:60px;
-    }
-    */
     aside {
         width:auto;
         position:fixed;
@@ -566,8 +606,8 @@ h1, h2 {
     }
 
     .produtoBig img {
-        width: 75%;
-        height: auto;
+        width: 60%;
+        height: auto;   
     }
 
     .produtoInfo h1 {
@@ -605,22 +645,38 @@ h1, h2 {
 
 }
 
-@media (max-width:450px) {
+@media (max-width:480px) {
     .logo {
-        font-size: 16px;
+        font-size: 25px;
     }
     .menu-openner {
         font-size: 1.5rem;
-        padding: 10px 5px;
-        
+        padding: 10px 10px;
+    }
+    .nav-list a{
+        font-size: 0.9rem;
+        margin-left: -1.5rem;
+        margin-left: 20px;
+    }
+    .nav-list{
+        width: 35vw;
+        height: 100vh;
     }
 }
 
-@media (max-width:380px) {
+@media (max-width:395px) {
     .logo {
-        font-size: 1rem;
+        font-size: 15px;
     }
     .menu-openner {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
+        margin: 10px 10px;
+    }
+    .mobile-menu div {
+        width: 25px;
+        height: 2px;
+    }
+    .nav-list a{
+        font-size: 11px;
     }
 }
