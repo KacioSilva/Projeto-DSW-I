@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="/assets/estilos/produtos.css">
-    
-   
+
+
     <!--IMPORTANDO O ICONEBOX-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -25,126 +25,189 @@
 </head>
 
 <body>
-    <!-- .menu-openner aparecera no modo mobile -->
-    <header>
-        <nav>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <h1><a href="home.html" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a></h1>
-            
-            <ul class="nav-list">
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
-        <div class="menu-openner">
-            <span>0</span>🛒
-        </div>
-        
-    </header>
-    <!-- modelos de produto na lista e no carrinho -->
-    <div class="models">
-
-        <!-- produto na lista -->
-        <div class="produto-item">
-            <a href="">
-                <div class="produto-item--img"><img src="" /></div>
-                <div class="produto-item--add">+</div>
-            </a>
-            <div class="produto-item--price">R$ --</div>
-            <div class="produto-item--name">--</div>
-            <div class="produto-item--desc">--</div>
-        </div>
-
-        <!-- produto no carrinho -->
-        <div class="cart--item">
-            <img src="" />
-
-            <div class="cart--item-nome">--</div>
-            <div class="cart--item--qtarea">
-                <button class="cart--item-qtmenos">-</button>
-                <div class="cart--item--qt">1</div>
-                <button class="cart--item-qtmais">+</button>
-            </div>
-        </div>
-
-    </div>
-    <!-- /models -->
-
-    <!-- conteudo principal -->
-    <main>
-
-        <h2>produtos</h2>
-
-        <div class="produto-area"></div>
-    </main>
-    <!-- /conteudo principal -->
-
-    <!-- aside do carrinho -->
-    <aside>
-        <div class="cart--area">
-            <div class="menu-closer">❌</div>
-            <h1>Seus produtos</h1>
-            <div class="cart"></div>
-            <div class="cart--details">
-                <div class="cart--totalitem subtotal">
-                    <span>Subtotal</span>
-                    <span>R$ --</span>
+    <div class="teste">
+        <!-- .menu-openner aparecera no modo mobile -->
+        <header>
+            <nav>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
-                <div class="cart--totalitem desconto">
-                    <span>Desconto</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart--totalitem total big">
-                    <span>Total</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart--finalizar">Finalizar a compra</div>
-            </div>
-        </div>
-    </aside>
-    <!-- /aside do carrinho -->
+                <h1><a href="home.html" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a></h1>
 
-    <!-- janela modal .produtoWindowArea -->
-    <div class="produtoWindowArea">
-        <div class="produtoWindowBody">
-            <div class="produtoInfo--cancelMobileButton">Voltar</div>
-            <div class="produtoBig">
+                <ul class="nav-list">
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+            <div class="menu-openner">
+                <span>0</span>🛒
+            </div>
+
+        </header>
+        <!-- modelos de produto na lista e no carrinho -->
+        <div class="models">
+
+            <!-- produto na lista -->
+            <div class="produto-item">
+                <a href="">
+                    <div class="produto-item--img"><img src="" /></div>
+                    <div class="produto-item--add">+</div>
+                </a>
+                <div class="produto-item--price">R$ --</div>
+                <div class="produto-item--name">--</div>
+                <div class="produto-item--desc">--</div>
+            </div>
+
+            <!-- produto no carrinho -->
+            <div class="cart--item">
                 <img src="" />
-            </div>
-            <div class="produtoInfo">
-                <h1>--</h1>
-                <div class="produtoInfo--desc">--</div>
-                <div class="produtoInfo--sizearea">
-                    <div class="produtoInfo--sector">Armazenamento</div>
-                    <div class="produtoInfo--sizes">
-                        <div data-key="64" class="produtoInfo--size">64GB <span>--</span></div>
-                        <div data-key="128" class="produtoInfo--size">128GB <span>--</span></div>
-                        <div data-key="256" class="produtoInfo--size selected">256GB <span>--</span></div>
-                    </div>
+
+                <div class="cart--item-nome">--</div>
+                <div class="cart--item--qtarea">
+                    <button class="cart--item-qtmenos">-</button>
+                    <div class="cart--item--qt">1</div>
+                    <button class="cart--item-qtmais">+</button>
                 </div>
-                <div class="produtoInfo--pricearea">
-                    <div class="produtoInfo--sector">Preço</div>
-                    <div class="produtoInfo--price">
-                        <div class="produtoInfo--actualPrice">R$ --</div>
-                        <div class="produtoInfo--qtarea">
-                            <button class="produtoInfo--qtmenos">-</button>
-                            <div class="produtoInfo--qt">1</div>
-                            <button class="produtoInfo--qtmais">+</button>
+            </div>
+
+        </div>
+        <!-- /models -->
+
+        <!-- conteudo principal -->
+        <main>
+            <h2>produtos</h2>
+
+            <div class="produto-area"></div>
+        </main>
+        <!-- /conteudo principal -->
+
+        <!-- aside do carrinho -->
+        <aside>
+            <div class="cart--area">
+                <div class="menu-closer">❌</div>
+                <h1>Seus produtos</h1>
+                <div class="cart"></div>
+                <div class="cart--details">
+                    <div class="cart--totalitem subtotal">
+                        <span>Subtotal</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--totalitem desconto">
+                        <span>Desconto</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--totalitem total big">
+                        <span>Total</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--finalizar">Finalizar a compra</div>
+                </div>
+            </div>
+        </aside>
+        <!-- /aside do carrinho -->
+
+        <!-- janela modal .produtoWindowArea -->
+        <div class="produtoWindowArea">
+            <div class="produtoWindowBody">
+                <div class="produtoInfo--cancelMobileButton">Voltar</div>
+                <div class="produtoBig">
+                    <img src="" />
+                </div>
+                <div class="produtoInfo">
+                    <h1>--</h1>
+                    <div class="produtoInfo--desc">--</div>
+                    <div class="produtoInfo--sizearea">
+                        <div class="produtoInfo--sector">Armazenamento</div>
+                        <div class="produtoInfo--sizes">
+                            <div data-key="64" class="produtoInfo--size">64GB <span>--</span></div>
+                            <div data-key="128" class="produtoInfo--size">128GB <span>--</span></div>
+                            <div data-key="256" class="produtoInfo--size selected">256GB <span>--</span></div>
                         </div>
                     </div>
+                    <div class="produtoInfo--pricearea">
+                        <div class="produtoInfo--sector">Preço</div>
+                        <div class="produtoInfo--price">
+                            <div class="produtoInfo--actualPrice">R$ --</div>
+                            <div class="produtoInfo--qtarea">
+                                <button class="produtoInfo--qtmenos">-</button>
+                                <div class="produtoInfo--qt">1</div>
+                                <button class="produtoInfo--qtmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produtoInfo--addButton">Adicionar ao carrinho</div>
+                    <div class="produtoInfo--cancelButton">Cancelar</div>
                 </div>
-                <div class="produtoInfo--addButton">Adicionar ao carrinho</div>
-                <div class="produtoInfo--cancelButton">Cancelar</div>
             </div>
         </div>
     </div>
     <!-- /janela modal .produtoWindowArea -->
+    <footer>
+        <!-- Footer -->
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Mercado IFPE</h1>
+                <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <h3>Link</h3>
+                <li>
+                    <a href="home.html" class="footer-link">Tela Inicial</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Produtos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Criar Conta</a>
+                </li>
+                <li>
+                    <a href="sobre.html" class="footer-link">Sobre</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <h3>Suporte</h3>
+                <li>
+                    <a href="#" class="footer-link">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Características</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_copyright">
+            <p>&#169 2023 all rights reserved</p>
+        </div>
+    </footer>
+    <!-- /Footer -->
 
     <script src="/script/produtos.js"></script>
     <script src="/script/script.js"></script>
