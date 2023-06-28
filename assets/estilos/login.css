@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+body{
+    margin:0;
+    padding: 0; 
+}
+.mainLogin{
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textfield{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.imagem{
+    width: 50vh;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.imagem h1{
+    color:white;
+    font-size: 3vw;
+}
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+.cardLogin{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+.cardLogin h1{
+    color:#00ff88;
+}
+.textfield label{
+    color: white;
+    margin-bottom: 10px;
+}
+.textfield input{
+    width: 100%;
+    border:none;
+    border-radius: 15px;
+    background-color: #514869;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+
+}
+.textfield input::placeholder{
+    color:#f0ffff94;
+}
+.btnLogin{
+    width: 60%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2b134b;
+    background-color: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+.gif{
+    width: 35vw;
+}
+
+@media only screen and(max-width: 450px){
+    .cardLogin{
+        width: 85%;
+    }
+}
