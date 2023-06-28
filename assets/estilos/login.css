@@ -25,7 +25,7 @@ body{
 
 .imagem{
     width: 50vh;
-    height: 100vw;
+    height: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
