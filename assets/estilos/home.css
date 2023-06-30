@@ -1,6 +1,6 @@
 :root {
     --bg-color: var(--bg-color) #101113;
-    --tex-color: #fff;
+    --textt-color: #fff;
     --main-color: #34e7f8;
     --other-color: #fcfcfc;
     --h1-font: 4rem;
@@ -17,30 +17,10 @@
     font-family: 'Poppins';
 }
 
-body {
-    background-color: #101113;
-}
-
-a {
-    color: var(--tex-color);
+header a {
+    margin-left: 1rem;
+    color:white; 
     text-decoration: none;
-    transition: 0.3s;
-    font-size: 18px;
-}
-
-a:hover {
-    opacity: 0.7;
-    color: var(--main-color)
-}
-
-#iconeLoja {
-    color: var(--main-color);
-}
-
-.logo {
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 nav {
@@ -50,11 +30,6 @@ nav {
     font-family: 'Poppins';
     background: #1e1e2b;
     height: 8vh;
-}
-
-main {
-    background-size: cover;
-    height: 92vh;
 }
 
 .nav-list {
@@ -68,6 +43,31 @@ main {
 
 }
 
+main {
+    background-size: cover;
+    height: 60rem;
+}
+
+body {
+    background-color: #ecf6fc;
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+#iconeLoja {
+    color: var(--main-color);
+}
+
+.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ---------------- BOTÃO MENU -----------------*/
+
 .mobile-menu {
     display: none;
     cursor: pointer;
@@ -80,7 +80,9 @@ main {
     margin: 8px;
     transition: 0.3s;
 }
-/*-------------MEDIA PARA AJUSTAR O BOTÃO MENU---------------*/
+/* ---------------- /BOTÃO MENU -----------------*/ 
+
+/*------------- AJUSTES BOTÃO MENU ---------------*/
 @media screen and (max-width: 999px) {
     body {
         z-index: 1;
@@ -114,12 +116,11 @@ main {
     
     }
 }
-
 .nav-list.active {
     transform: translateX(0);
     z-index: 1;
 }
-/*---------------------------------------------*/
+
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -143,12 +144,29 @@ main {
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
-/* ----------------footer-------------*/
+/*------------- /AJUSTES BOTÃO MENU ---------------*/
+
+
+/* ----------------FOOTER-------------*/
 footer{
     width: 100%;
-    color: var(--tex-color);
+    color: var(--text-color);
     background-color: var(--color--footer);
 } 
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:var(--main-color);
+}
+footer h1{
+    display: flex;
+    color:red;
+}
+footer h3{
+    color:red;
+}
 #footer_content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -176,7 +194,6 @@ footer{
     gap: 0.75rem;
     list-style: none;
     margin-left: 16rem;
-    
 }
 
 #footer_copyright {
@@ -186,23 +203,17 @@ footer{
     font-weight: 100;
     background-color:#1e1e2b;
 }
-/*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
-@media (max-width: 999px) {
-    #footer_content {
-        grid-template-columns: repeat(1, 2fr);
-        gap: 2rem;    
-    }
-    .footer-list{
-        margin: 0;
-    }
-}/*---------------------------------------------*/
+/* ---------------- /FOOTER -------------*/
 
-/*----------------MAIN---------------*/
+
 .main{
     display: flex;
 }
+.main a{
+    text-decoration: none;
+}
 .home-text{
-color:var(--tex-color);
+color:black;
 font-weight: 700;
 margin-left: 52rem;
 margin-top: 20rem;
@@ -226,11 +237,13 @@ letter-spacing: 2;
     display: inline-block;
     padding: 15px 70px;
     background-color: transparent;
-    border: solid 2px var(--tex-color); 
+    border: solid 2px red;
     transition: all.55s ease;
+    color:black;
 }
 .btn-compre-agora:hover{
     transform: translateY(-10px);
+    color:red;
 }
 
 .imagem-principal{
@@ -305,6 +318,8 @@ letter-spacing: 2;
 .row3:hover {
     transform: translateY(-8px);
 }
+/*------------ /BOTÕES PARA MUDAR A COR DO IPHONE -----------------*/
+
 
 @media (max-width: 1150px){
     .home-text{
@@ -330,6 +345,17 @@ letter-spacing: 2;
         align-items: center;
     }
 }
+/*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
+@media (max-width: 999px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 2fr);
+        gap: 2rem;    
+    }
+    .footer-list{
+        margin: 0;
+    }
+}
+/*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
 
 @media (max-width:780px){
     .home-text{
