@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap');
 :root {
-    --corFundo: #ecf6fc;
+    --corFundo: #e9e9e9;
     --brancoAzulado: #ecf6fc;
     --text-color: #fff;
     --azulCiano: #34e7f8;
@@ -16,6 +16,7 @@
     --nomeProduto: #000000;
     --corDescricao: #555;   
     --corPrice:#333;
+    --corNavList: #23232e;
 }
 
 * {
@@ -53,14 +54,13 @@ nav {
     justify-content:space-around;
     align-items: center;
     font-family: 'Poppins';
-    height: 8vh;
+   
 }
 .nav-list {
     list-style: none;
     display: flex;
 }
 .nav-list li{
-    position: relative;
     margin-left: 10px;
     letter-spacing: 3px;
 }
@@ -96,8 +96,6 @@ main {
 .mobile-menu {
     display: none;
     cursor: pointer;
-    margin-left: 0rem;
-    
 }
 
 .mobile-menu div {
@@ -110,7 +108,7 @@ main {
 /* ---------------- /BOTÃO MENU -----------------*/
 
 /*------------- AJUSTES BOTÃO MENU---------------*/
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 999px) {
     body {
         z-index: 1;
         overflow-x: hidden;
@@ -120,20 +118,21 @@ main {
         top: 2.83rem;
         right: 0;
         width: 25vw;
-        height: 100vh;
-        background: #23232e;
+        height: 60rem;
+        background: var(--corNavList);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
+
     }
 
     .nav-list li {
         margin-left: 0;
         opacity: 0;
         letter-spacing: 3px;
-        margin-right: 50px;
+        margin-right: 5vw;
     }
 
     .mobile-menu {
@@ -145,6 +144,7 @@ main {
 .nav-list.active {
     transform: translateX(0);
     z-index: 1;
+   
 }
 
 @keyframes navLinkFade {
@@ -678,7 +678,10 @@ footer h3{
     .produtoInfo--cancelMobileButton {
         display:block;
     }
-
+    .nav-list{
+        width: 35vw;
+        height: 100vh;
+    }
 }
 
 @media (max-width:480px) {
@@ -694,10 +697,6 @@ footer h3{
         margin-left: -1.5rem;
         margin-left: 20px;
     }
-    .nav-list{
-        width: 35vw;
-        height: 100vh;
-    }
 }
 
 @media (max-width:395px) {
@@ -712,9 +711,6 @@ footer h3{
         width: 25px;
         height: 2px;
     }
-    .nav-list a{
-        font-size: 11px;
-    }
 }
 
 /*------------------- MEDIA PARA AJUSTAR O FOOTER----------------*/
@@ -728,3 +724,8 @@ footer h3{
     }
 }
 /*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
+@media (max-width:780px){
+    .nav-list a{
+        font-size: 12px;
+    }
+}

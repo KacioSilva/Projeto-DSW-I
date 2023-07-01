@@ -1,14 +1,17 @@
 :root {
-    --bg-color: var(--bg-color) #101113;
-    --textt-color: #fff;
-    --main-color: #34e7f8;
-    --other-color: #fcfcfc;
-    --h1-font: 4rem;
-    --p-font: 1rem;
-    --black-color: #000000;
-    --yellow-color: #ffff00;
-    --red-color: #ff0000;
+    --text-color: #fff;
+    --azulCiano: #34e7f8;
+    --row1-color: #ff0000;
+    --row2-color: #000000;
+    --row3-color: #ffff00;
     --color--footer:#1e211e;
+    --corHeader: #1e1e2b;
+    --corFundo: #e9e9e9;
+    --fundoCompreAgora: transparent;
+    --bordaCompreAgora: #000000;
+    --nomeCompreAgora:#000000;
+    --corNavList: #23232e;
+    --corDescricao: #000000;
 }
 
 * {
@@ -22,13 +25,14 @@ header a {
     color:white; 
     text-decoration: none;
 }
-
+header{
+    background-color: var(--corHeader);
+}
 nav {
     display: flex;
     justify-content:space-around;
     align-items: center;
     font-family: 'Poppins';
-    background: #1e1e2b;
     height: 8vh;
 }
 
@@ -49,15 +53,15 @@ main {
 }
 
 body {
-    background-color: #ecf6fc;
+    background-color: var(--corFundo);
 }
 
 a:hover {
-    color: var(--main-color);
+    color: var(--azulCiano);
 }
 
 #iconeLoja {
-    color: var(--main-color);
+    color: var(--azulCiano);
 }
 
 .logo {
@@ -91,10 +95,10 @@ a:hover {
     .nav-list {
         position: absolute;
         top: 8vh;
+        height: 60rem;
         right: 0;
         width: 25vw;
-        height: 92vh;
-        background: #23232e;
+        background: var(--corNavList);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -105,15 +109,12 @@ a:hover {
     .nav-list li {
         margin-left: 0;
         opacity: 0;
+        letter-spacing: 3px;
+        margin-right: 2vh;
     }
 
     .mobile-menu {
         display: block;
-    }
-    .nav-list li {
-        letter-spacing: 3px;
-        margin-right: 10px;
-    
     }
 }
 .nav-list.active {
@@ -158,7 +159,7 @@ footer a{
     text-decoration: none;
 }
 footer a:hover{
-    color:var(--main-color);
+    color:var(--azulCiano);
 }
 footer h1{
     display: flex;
@@ -213,7 +214,7 @@ footer h3{
     text-decoration: none;
 }
 .home-text{
-color:black;
+color: var(--corDescricao);
 font-weight: 700;
 margin-left: 52rem;
 margin-top: 20rem;
@@ -236,14 +237,14 @@ letter-spacing: 2;
 .btn-compre-agora{
     display: inline-block;
     padding: 15px 70px;
-    background-color: transparent;
-    border: solid 2px red;
+    background-color: var(--fundoCompreAgora);
+    border: solid 2px var(--bordaCompreAgora);
     transition: all.55s ease;
-    color:black;
+    color:var(--nomeCompreAgora);
 }
 .btn-compre-agora:hover{
     transform: translateY(-10px);
-    color:red;
+    color:var(--azulCiano);
 }
 
 .imagem-principal{
@@ -276,7 +277,7 @@ letter-spacing: 2;
     max-width: 100%;
 }
 .row1{
-    background-color: var(--red-color);
+    background-color: var(--row1-color);
     height: 100px;
     width: 80px;
     border-radius: 50%;
@@ -291,7 +292,7 @@ letter-spacing: 2;
     transform: translateY(-8px);
 }
 .row2{
-    background-color: var(--black-color);
+    background-color: var(--row2-color);
     height: 100px;
     width: 80px;
     border-radius: 50%;
@@ -305,7 +306,7 @@ letter-spacing: 2;
     transform: translateY(-8px);
 }
 .row3{
-    background-color: var(--yellow-color);
+    background-color: var(--row3-color);
     height: 100px;
     width: 80px;
     border-radius: 50%;
@@ -386,5 +387,13 @@ letter-spacing: 2;
     }
     .nav-list a{
         font-size: 12px;
+    }
+    .nav-list{
+        width: 35vw;
+    }
+}
+@media (max-width:395px) {
+    .logo {
+        font-size: 15px;
     }
 }
