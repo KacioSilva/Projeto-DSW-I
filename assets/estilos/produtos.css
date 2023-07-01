@@ -23,7 +23,7 @@
     box-sizing: border-box;
     font-family: 'Poppins';
 }
-.teste{
+.centro{
     display: flex;
 }
 
@@ -32,7 +32,6 @@ a:hover {
 }
 
 header {
-    position: fixed;
     left:0;
     top:0;
     right:0;
@@ -111,14 +110,14 @@ main {
 @media screen and (max-width: 999px) {
     body {
         z-index: 1;
-        overflow-x: hidden;
+        
     }
     .nav-list {
         position: absolute;
         top: 2.83rem;
         right: 0;
         width: 25vw;
-        height: 60rem;
+        height: 68.1rem;
         background: var(--corNavList);
         flex-direction: column;
         align-items: center;
@@ -680,7 +679,7 @@ footer h3{
     }
     .nav-list{
         width: 35vw;
-        height: 100vh;
+        height: 126.1rem;
     }
 }
 
@@ -697,6 +696,7 @@ footer h3{
         margin-left: -1.5rem;
         margin-left: 20px;
     }
+
 }
 
 @media (max-width:395px) {
