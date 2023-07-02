@@ -116,7 +116,7 @@ main {
         position: absolute;
         top: 2.83rem;
         right: 0;
-        width: 25vw;
+        width: 8rem;
         height: 68.1rem;
         background: var(--corNavList);
         flex-direction: column;
