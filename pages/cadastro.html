@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/assets/estilos/cadastro.css">
+
+    <!--IMPORTANDO O ICONEBOX-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--IMPORTANDO O ICONEBOX-->
+    <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1><a href="home.html" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a></h1>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="container">
+            <div class="formImage">
+                <img src="/assets/images/imageGeral/svg/shopping.svg" alt="">
+            </div>
+            <div class="form">
+                <form action="#">
+                    <div class="formHeader">
+                        <div class="title">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                        <div class="loginButton">
+                            <button><a href="login.html">Entrar</a></button>
+                        </div>
+
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputBox">
+                            <label for="nome">Primeiro Nome:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Infome o seu Primeiro Nome" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="sobrenome">Sobrenome:</label>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Infome o seu Sobrenome"
+                                required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="sobrenome" placeholder="Infome o seu Email" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="celular">Celular:</label>
+                            <input type="number" id="celular" name="celular" placeholder="(xx) xxxx-xxxx" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha" placeholder="Infome a sua Senha" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="confSenha">Repita a senha:</label>
+                            <input type="password" id="confSenha" name="confSenha" placeholder="Informe a sua Senha" required>
+                        </div>
+                    </div>
+                    <div class="generoInput">
+                        <h6>Gêneros</h6>
+                        <div class="generoGrupo">
+                            <div class="gender-input">
+                                <input type="radio" id="feminino" name="genero">
+                                <label for="feminino">Feminino</label>
+                            </div>
+                            <div class="gender-input">
+                                <input type="radio" id="masculino" name="genero">
+                                <label for="masculino">Masculino</label>
+                            </div>
+                            <div class="gender-input">
+                                <input type="radio" id="outros" name="genero">
+                                <label for="outros">Outros</label>
+                            </div>
+                            <div class="gender-input">
+                                <input type="radio" id="none" name="genero">
+                                <label for="none">Prefiro não dizer</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continueButton">
+                        <button type="submit">Continuar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Mercado IFPE</h1>
+                <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <h3>Link</h3>
+                <li>
+                    <a href="home.html" class="footer-link">Tela Inicial</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Produtos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Criar Conta</a>
+                </li>
+                <li>
+                    <a href="sobre.html" class="footer-link">Sobre</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <h3>Suporte</h3>
+                <li>
+                    <a href="#" class="footer-link">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Características</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_copyright">
+            <p>&#169 2023 all rights reserved</p>
+        </div>
+    </footer>
+    <script src="/script/navbar.js"></script>
+</body>
+
+</html>

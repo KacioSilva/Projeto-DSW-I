@@ -18,11 +18,25 @@
     --corNavList: #23232e;
 }
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     font-family: 'Poppins';
+    box-sizing: border-box;
 }
-/*---------------------------------------------------*/
+
+body{
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corFundo);
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--corFundo);
+}
 
 a {
     color: var(--tex-color);
@@ -56,11 +70,6 @@ nav {
     height: 8vh;
 }
 
-main {
-    background-size: cover;
-    height: 92vh;
-}
-
 .nav-list {
     list-style: none;
     display: flex;
@@ -69,38 +78,36 @@ main {
 .nav-list li {
     letter-spacing: 3px;
     margin: 0 30px;
-
 }
 /* ---------------- BOTÃO MENU -----------------*/
+
 .mobile-menu {
     display: none;
     cursor: pointer;
-    margin-left: 0rem;
 }
 
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: white;
+    background: #fff;
     margin: 8px;
     transition: 0.3s;
 }
-/* ---------------- /BOTÃO MENU -----------------*/
+/* ---------------- /BOTÃO MENU -----------------*/ 
 
-/*------------- AJUSTES BOTÃO MENU---------------*/
-@media screen and (max-width: 860px) {
-    
+/*------------- AJUSTES BOTÃO MENU ---------------*/
+@media screen and (max-width: 999px) {
     body {
         z-index: 1;
-        overflow-x: hidden; 
+        overflow-x: hidden;
     }
     .nav-list {
         position: absolute;
-        top: 4rem;
+        top: 8vh;
+        height: 60rem;
         right: 0;
         width: 8rem;
-        height: 69.7rem;
-        background: #23232e;
+        background: var(--corNavList);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -112,15 +119,13 @@ main {
         margin-left: 0;
         opacity: 0;
         letter-spacing: 3px;
-        margin-right: 2vw;
+        margin-right: 2vh;
     }
 
     .mobile-menu {
         display: block;
     }
 }
-
-
 .nav-list.active {
     transform: translateX(0);
     z-index: 1;
@@ -149,98 +154,127 @@ main {
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
-/*------------- /AJUSTES BOTÃO MENU---------------*/
-
-.mainLogin{ 
-    background-color: #201b2c;
+/*------------- /AJUSTES BOTÃO MENU ---------------*/
+.container{
+    width: 80%;
+    height: 80vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .212);
 }
-.textfield{
-    display:flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin: 10px 0px;
-}
-
-.leftLogin{
-    width: 50vw;
-    height: 100vh; /* --------------  */
+.form{
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0.5vw;
 }
-.leftLogin h1{
-    color:#00ff88;
-    font-size: 3vw;
-}
-.leftLogin h4{
-    color: white;
-    font-size: 1.2vw;
-}
-.rightLogin{
-    width: 50vw;
-    height: 100vh;
+.formImage{
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-}  
-.cardLogin{
-    width: 60%;
+    background-color: #fde3a7d7;
+    padding: 1rem;
+}
+.formImage img{
+    width: 31rem;
+}
+.formHeader{
+    margin: 3rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background-color: #2f2841;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056; /* sombra */
+    justify-content: space-between;
 }
-.cardLogin h1{
-    color:#00ff88;
-    font-weight: 800;
-    margin: 0;
-}
-.textfield label{
-    color: white;
-    margin-bottom: 10px;
-}
-.textfield input{
-    width: 100%;
+.loginButton button{
     border:none;
-    border-radius: 15px;
-    padding: 15px;
-    background-color: #514869;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
-    outline: none;
-    box-sizing: border-box;
-
-}
-.textfield input::placeholder{
-    color:#f0ffff94;
-}
-.btnLogin{
-    width: 70%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #2b134b;
-    background-color: #00ff88;
+    background-color: #6c63ff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00ff8052;
 }
-.gif{
-    width: 35vw;
+.loginButton button:hover{
+    background-color: #6c63fff1;
 }
+.loginButton button{
+    text-decoration: none;
+    font-weight: 500;
+    color:var(--text-color);
+}
+.formHeader h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #6c63ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.inputGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.inputBox input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+.inputBox input:hover{
+    background-color: #eeeeee75;
+}
+.inputBox input:focus-visible{
+    outline: 1px solid #6c63ff;
+}
+.inputBox label,
+.gender-title,
+h6{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color:#000000c0;
+}
+.inputBox input::placeholder{
+    color:var(--preto);
+    font-size: 11px;
+}
+.generoGrupo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+.gender-input{
+    display:flex;
+    align-items: center;
+}
+.gender-input input{
+    margin-right: 0.35rem;
+}
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+}
+.continueButton button{
+    width: 100%;
+    margin-top: 40px;
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.62rem;
+    border-radius: 10px;
+    color: var(--text-color);
+} 
+.continueButton button:hover{
+    background-color: #6b63fff1;
+}
+
 /*------------- FOOTER ---------------*/
 footer{
     width: 100%;
@@ -296,10 +330,52 @@ footer h3{
 }
 /*------------- /FOOTER ---------------*/
 
-@media only screen and(max-width: 450px){
-    .cardLogin{
+@media screen and (max-width: 1330px) {
+    .formImage {
+        display: none;
+    }
+    .container {
+        width: 60%;
+    }
+    .form {
         width: 100%;
-        height: 100vh;
+    }
+    .inputGroup{
+        margin-left: 1rem;
+    }
+    
+}
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%; 
+        height: auto;
+    }
+
+    .inputGroup {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 15rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        margin-left: 2rem;
+    }
+    .gender-input {
+        margin-top: 2rem;  
+    }
+   
+    .generoGrupo {
+        flex-direction: column;
+    }
+
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+    .formHeader h1{
+        font-size: 1.2rem;
+    }
+    .loginButton{
+        width: 85px;
     }
 }
 /*------------------- MEDIA PARA AJUSTAR O FOOTER----------------*/
@@ -312,40 +388,4 @@ footer h3{
         margin: 0;
     }
 }
-@media (max-width: 730px){
-    .mainLogin{
-        display: grid;
-    }
-    .leftLogin{
-        width: 50vw;
-        height: 70vh;/* --------------  */
-        display: flex;
-    }
-    .leftLogin h1{
-        font-size: 8vw;
-    }
-    .leftLogin h4{
-        font-size: 0.8rem;
-    }
-    .gif{
-        width: 80vw;
-    }
-    .rightLogin{
-        height: 30rem;
-        width: 50vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }  
-    .cardLogin{
-        width: 60%;
-        padding: 30px 6rem;
-       
-    }
-    .textfield{
-        margin: 5px -4rem;
-    }
-    .nav-list a{
-        font-size: 12px;
-    }
-}
+/*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
