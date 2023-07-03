@@ -300,7 +300,7 @@ h1, h2 {
     transition: all ease .5s;
     justify-content: center;
     align-items: center;
-    overflow-y:auto;
+
 }
 
 .produtoWindowBody {
@@ -359,7 +359,6 @@ h1, h2 {
 .produtoInfo--sizes {
     display:inline-flex;
     border-radius:10px;
-    overflow:hidden;
 }
 
 .produtoInfo--size {
