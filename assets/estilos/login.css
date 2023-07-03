@@ -21,7 +21,29 @@
     margin:0;
     padding: 0;
     font-family: 'Poppins';
+    box-sizing: border-box;
 }
+body{
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corFundo);
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--corFundo);
+}
+
+.mainLogin{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .212);
+}
+
 /*---------------------------------------------------*/
 
 a {
@@ -151,12 +173,6 @@ main {
 }
 /*------------- /AJUSTES BOTÃO MENU---------------*/
 
-.mainLogin{ 
-    background-color: #201b2c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .textfield{
     display:flex;
     flex-direction: column;
@@ -167,11 +183,11 @@ main {
 
 .leftLogin{
     width: 50vw;
-    height: 100vh; /* --------------  */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #fde3a7d7;
 }
 .leftLogin h1{
     color:#00ff88;
@@ -183,45 +199,48 @@ main {
 }
 .rightLogin{
     width: 50vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }  
 .cardLogin{
-    width: 60%;
+    width: 80%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 35px;
-    background-color: #2f2841;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056; /* sombra */
+    box-shadow: 0px 10px 40px #00000056;
 }
 .cardLogin h1{
-    color:#00ff88;
-    font-weight: 800;
-    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+    color:#000000c0;
+    text-transform: uppercase;
 }
 .textfield label{
-    color: white;
-    margin-bottom: 10px;
+    color: var(--preto);
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 .textfield input{
     width: 100%;
     border:none;
     border-radius: 15px;
     padding: 15px;
-    background-color: #514869;
     font-size: 12pt;
     box-shadow: 0px 10px 40px #00000056;
     outline: none;
     box-sizing: border-box;
+}
+.textfield input:hover{
+    background-color: #eeeeee75;
 
 }
 .textfield input::placeholder{
-    color:#f0ffff94;
+    color:var(--preto);
+    font-size: 11px;
 }
 .btnLogin{
     width: 70%;
@@ -234,9 +253,13 @@ main {
     font-weight: 800;
     letter-spacing: 2px;
     color: #2b134b;
-    background-color: #00ff88;
+    background-color: #6c63ff;;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00ff8052;
+    box-shadow: 0px 10px 40px -12px #37356d;
+    color:var(--text-color);
+}
+.btnLogin:hover{
+    background-color: #6b63fff1;
 }
 .gif{
     width: 35vw;
@@ -297,10 +320,7 @@ footer h3{
 /*------------- /FOOTER ---------------*/
 
 @media only screen and(max-width: 450px){
-    .cardLogin{
-        width: 100%;
-        height: 100vh;
-    }
+  
 }
 /*------------------- MEDIA PARA AJUSTAR O FOOTER----------------*/
 @media (max-width: 999px) {
@@ -312,40 +332,28 @@ footer h3{
         margin: 0;
     }
 }
-@media (max-width: 730px){
-    .mainLogin{
-        display: grid;
+@media screen and (max-width: 1330px) {
+    .leftLogin {
+        display: none;
     }
-    .leftLogin{
-        width: 50vw;
-        height: 70vh;/* --------------  */
-        display: flex;
+    .mainLogin {
+        width: 50%;
     }
-    .leftLogin h1{
-        font-size: 8vw;
-    }
-    .leftLogin h4{
-        font-size: 0.8rem;
-    }
-    .gif{
-        width: 80vw;
+    .cardLogin {
+        width: 100%;
+        height: 70vh;
     }
     .rightLogin{
-        height: 30rem;
-        width: 50vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }  
-    .cardLogin{
-        width: 60%;
-        padding: 30px 6rem;
-       
+        height: 100%;
     }
-    .textfield{
-        margin: 5px -4rem;
+}
+@media screen and (max-width: 1064px) {
+    .mainLogin {
+        width: 100%;
     }
-    .nav-list a{
-        font-size: 12px;
+
+    .rightLogin{
+        width: 80%;
+        margin-left: 2.5rem;
     }
 }
