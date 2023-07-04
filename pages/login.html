@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/assets/estilos/login.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
 
     <!--IMPORTANDO O ICONEBOX-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -53,10 +54,13 @@
                     <h1>Login</h1>
                     <form action="#">
                         <div class="textfield">
+
                             <label for="usuario">Usuário</label>
-                            <input type="text" name="usuario" placeholder="Insira o CPF" required> <br>
+                            <input type="text" name="usuario" id="usuario" placeholder="Insira o CPF" maxlength="14"
+                            autocomplete="off"  oninput="formatCPF(this)" required> <br>
+
                             <label for="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Insira a sua senha" requiredh>
+                            <input type="password" name="senha" id='senha' placeholder="Insira a sua senha" required>
                         </div>
                         <div class="botoes">
                             <a href="cadastro.html" class="btnCadastro">Cadastre-se</a>
@@ -133,6 +137,7 @@
         </div>
     </footer>
     <script src="/script/sideBar.js"></script>
+    <script src="/script/mascara.js"></script>
 
 </body>
 </html>
