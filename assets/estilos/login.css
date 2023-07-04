@@ -36,6 +36,36 @@ body{
     align-items: center;
     background: var(--corFundo);
 }
+header,
+.navigationHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header{
+    background-color: var(--corHeader);
+    box-shadow: 1px 1px 4px var(--azulCiano);
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.navigationHeader{
+    gap: 5rem;
+    z-index: 10;
+}
+.navigationHeader a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.5s;
+    height: bold;
+}
+.btnIconHeader{
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
 
 .mainLogin{
     width: 80%;
@@ -50,7 +80,7 @@ a {
     color: var(--tex-color);
     text-decoration: none;
     transition: 0.3s;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
 }
 
@@ -69,109 +99,10 @@ a:hover {
     letter-spacing: 2px;
 }
 
-nav {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    font-family: 'Poppins';
-    background: #1e1e2b;
-    height: 8vh;
-}
-
 main {
     background-size: cover;
     height: 92vh;
 }
-
-.nav-list {
-    list-style: none;
-    display: flex;
-}
-
-.nav-list li {
-    letter-spacing: 3px;
-    margin: 0 30px;
-
-}
-/* ---------------- BOTÃO MENU -----------------*/
-.mobile-menu {
-    display: none;
-    cursor: pointer;
-    margin-left: 0rem;
-}
-
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: white;
-    margin: 8px;
-    transition: 0.3s;
-}
-/* ---------------- /BOTÃO MENU -----------------*/
-
-/*------------- AJUSTES BOTÃO MENU---------------*/
-@media screen and (max-width: 860px) {
-    
-    body {
-        z-index: 1;
-        overflow-x: hidden; 
-    }
-    .nav-list {
-        position: absolute;
-        top: 4rem;
-        right: 0;
-        width: 8rem;
-        height: 69.7rem;
-        background: #23232e;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-        letter-spacing: 3px;
-        margin-right: 2vw;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-}
-
-
-.nav-list.active {
-    transform: translateX(0);
-    z-index: 1;
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
-/*------------- /AJUSTES BOTÃO MENU---------------*/
 
 .textfield{
     display:flex;
@@ -319,8 +250,10 @@ footer h3{
 }
 /*------------- /FOOTER ---------------*/
 
-@media only screen and(max-width: 450px){
-  
+@media (max-width: 780px){
+  .logo{
+    margin-right: 0;
+  }
 }
 /*------------------- MEDIA PARA AJUSTAR O FOOTER----------------*/
 @media (max-width: 999px) {
@@ -355,5 +288,37 @@ footer h3{
     .rightLogin{
         width: 80%;
         margin-left: 2.5rem;
+    }
+}
+/*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
+@media screen and (max-width: 1200px){
+    .btnIconHeader{
+        display: block;
+
+    }
+    .navigationHeader{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--corNavList);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    @keyframes showSidebar {
+        from{margin-left: -100vw;}
+        top{margin-left: -10vw;}
+    }
+    header a{
+     
+    }
+    
+}
+/*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
+@media (max-width:412px) {
+    .logo {
+        font-size: 22px;
     }
 }

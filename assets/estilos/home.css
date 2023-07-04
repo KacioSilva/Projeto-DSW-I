@@ -20,7 +20,16 @@
     font-family: 'Poppins';
 }
 
-
+a {
+    color: var(--tex-color);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 15px;
+    color: white;
+}
+a:hover{
+    color:var(--azulCiano);
+}
 main {
     background-size: cover;
     height: 60rem;
@@ -86,9 +95,7 @@ footer a{
     color: white;
     text-decoration: none;
 }
-footer a:hover{
-    color:var(--azulCiano);
-}
+
 footer h1{
     display: flex;
     color:red;
@@ -310,7 +317,6 @@ letter-spacing: 2;
         from{margin-left: -100vw;}
         top{margin-left: -10vw;}
     }
-    
 }
 /*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
 
@@ -340,14 +346,10 @@ letter-spacing: 2;
         flex-direction: column;
         top: 320px;
         left: 280px;
-    }
-    .logo{
-        font-size: 25px;
-        margin-left: 0;
-    }
+    }   
 }
-@media (max-width:395px) {
+@media (max-width:412px) {
     .logo {
-        font-size: 15px;
+        font-size: 22px;
     }
 }
