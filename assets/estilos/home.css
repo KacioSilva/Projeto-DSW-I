@@ -55,30 +55,6 @@ header{
     color: var(--text-color);
     cursor: pointer;
 }
-@media screen and (max-width: 768px){
-    .btnIconHeader{
-        display: block;
-
-    }
-    .navigationHeader{
-        position: absolute;
-        flex-direction: column;
-        top: 0;
-        background-color: var(--corNavList);
-        height: 100%;
-        width: 35vw;
-        padding: 1em;
-        animation-duration: 1s;
-        margin-left: -100vw;
-    }
-    @keyframes showSidebar {
-        from{margin-left: -100vw;}
-        top{margin-left: -10vw;}
-    }
-    .logo{
-        margin-left: -20rem;
-    }
-}
 
 body {
     background-color: var(--corFundo);
@@ -93,9 +69,11 @@ a:hover {
 }
 
 .logo {
-    font-size: 12px;
+    font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-decoration: none;
+    color:var(--text-color);
 }
 
 /* ----------------FOOTER-------------*/
@@ -311,6 +289,33 @@ letter-spacing: 2;
 }
 /*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
 
+/*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
+@media screen and (max-width: 1050px){
+    .btnIconHeader{
+        display: block;
+
+    }
+    .navigationHeader{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--corNavList);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    @keyframes showSidebar {
+        from{margin-left: -100vw;}
+        top{margin-left: -10vw;}
+    }
+    .logo{
+        margin-left: -35rem;
+    }
+}
+/*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
+
 @media (max-width:780px){
     .home-text{
         margin-left: 2rem;
@@ -337,6 +342,10 @@ letter-spacing: 2;
         flex-direction: column;
         top: 320px;
         left: 280px;
+    }
+    .logo{
+        font-size: 25px;
+        margin-left: 0;
     }
 }
 @media (max-width:395px) {

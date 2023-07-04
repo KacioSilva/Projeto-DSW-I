@@ -27,7 +27,7 @@ function closeSidebar(){
     }
 }
 window.addEventListener('resize', function(event){
-    if(this.window.innerWidth > 768 && showSideBar){
+    if(this.window.innerWidth > 1050 && showSideBar){
       toogleSidebar(); 
     }
 })
