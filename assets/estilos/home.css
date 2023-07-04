@@ -290,7 +290,7 @@ letter-spacing: 2;
 /*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
 
 /*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1200px){
     .btnIconHeader{
         display: block;
 
@@ -310,9 +310,7 @@ letter-spacing: 2;
         from{margin-left: -100vw;}
         top{margin-left: -10vw;}
     }
-    .logo{
-        margin-left: -35rem;
-    }
+    
 }
 /*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
 
