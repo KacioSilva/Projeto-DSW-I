@@ -13,13 +13,18 @@ function formatCelular(input) {
 
     let phoneNumber = input.value.replace(/\D/g, '');
 
+    phoneNumber = phoneNumber.replace(/(\d{2})(\d)/, '($1) $2');
+    phoneNumber = phoneNumber.replace(/(\d{5})(\d)/, '$1-$2');
 
-    if (phoneNumber.length === 11) {
-        phoneNumber = phoneNumber.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-    } else {
+    input.value = phoneNumber;
+}
 
-        phoneNumber = phoneNumber.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
-    }
+function formatTelefone(input) {
+
+    let phoneNumber = input.value.replace(/\D/g, '');
+
+    phoneNumber = phoneNumber.replace(/(\d{2})(\d)/, '($1) $2');
+    phoneNumber = phoneNumber.replace(/(\d{4})(\d)/, '$1-$2');
 
     input.value = phoneNumber;
 }
