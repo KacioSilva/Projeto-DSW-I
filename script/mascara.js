@@ -1,5 +1,10 @@
-function formatCPF(input) {
+function formatNome(input) {
+    let nomeUsuario = input.value.replace(/[^\p{L}]+/gu, '');
+    input.value = nomeUsuario.toUpperCase();
+}
 
+function formatCPF(input) {
+    
     let cpf = input.value.replace(/\D/g, '');
 
     cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
