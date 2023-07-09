@@ -34,6 +34,7 @@ main {
     background-size: cover;
     height: 60rem;
 }
+
 header,
 .navigationHeader{
     display: flex;
@@ -289,6 +290,7 @@ letter-spacing: 2;
     #footer_content {
         grid-template-columns: repeat(1, 2fr);
         gap: 2rem;    
+    
     }
     .footer-list{
         margin: 0;

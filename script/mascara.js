@@ -1,5 +1,5 @@
 function formatNome(input) {
-    let nomeUsuario = input.value.replace(/[^\p{L}]+/gu, '');
+    let nomeUsuario = input.value.replace(/[^\p{L}\s]+/gu, '');
     input.value = nomeUsuario.toUpperCase();
 }
 
@@ -43,4 +43,24 @@ function formatEmail(input) {
     } else {
         input.style.borderColor = "";
     }
+}
+function formatCvv(input){
+    let cvv = input.value.replace(/\D/g, '')
+    input.value = cvv;
+}
+function formatDataValidade(input){
+    let validade = input.value.replace(/\D/g, '');
+
+    validade = validade.replace(/(\d{2})(\d)/, '$1/$2');
+   
+    input.value = validade;
+}
+function formatCartao(input){
+    let cartao = input.value.replace(/\D/g, '');
+
+    cartao = cartao.replace(/(\d{4})(\d)/, '$1 $2');
+    cartao = cartao.replace(/(\d{4})(\d)/, '$1 $2');
+    cartao = cartao.replace(/(\d{4})(\d)/, '$1 $2');
+    
+    input.value = cartao;
 }

@@ -77,23 +77,23 @@
               </div>
               <div class="pagamento-method">
                 <h2>Método de Pagamento</h2>
-                <div class="payment-options">
+                <div class="pagamento-options">
                   <input type="radio" id="cartaoCredito" name="paymentOption" value="cartaoCredito" checked>
                   <label for="cartaoCredito">Crédito</label>
                   <input type="radio" id="pix" name="paymentOption" value="pix">
                   <label for="pix">Pix</label>
                 </div>
                 <div id="cartaoCreditoFields">
-                  <input type="text" placeholder="Número do Cartão" required>
-                  <input type="text" placeholder="Nome do Titular" required>
-                  <input type="text" placeholder="Data de Validade" required>
-                  <input type="text" placeholder="CVV" required>
+                  <input type="text" placeholder="Número do Cartão" oninput="formatCartao(this)" maxlength="19" required>
+                  <input type="text" placeholder="Nome do Titular"  oninput="formatNome(this)" required>
+                  <input type="text" placeholder="Data de Validade" oninput="formatDataValidade(this)" maxlength="5" required>
+                  <input type="text" placeholder="CVV" oninput="formatCvv(this)" maxlength="3" required>
                 </div>
                 <div id="pixFields" style="display: none;">
                   <h3>Opções de Pagamento Pix</h3>
                   <div class="op1">
                     <input type="radio" id="chavePixOption" name="pixPaymentOption" value="chavePix" checked>
-                    <label for="chav    ePixOption">Pagar com Chave Pix</label>
+                    <label for="chavePixOption">Pagar com Chave Pix</label>
                 </div>
                 <div class="op2">
                   <input type="radio" id="qrCodeOption" name="pixPaymentOption" value="qrCode">
@@ -169,6 +169,7 @@
     
     <script src="/script/sideBar.js"></script>
     <script src="/script/transicaoImagens.js"></script>
+    <script src="/script/mascara.js"></script>
 
 </body>
 </html>
