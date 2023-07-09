@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/estilos/pagamento.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <title>Pagamento</title>
+
+    <!--IMPORTANDO O ICONEBOX-->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--IMPORTANDO O ICONEBOX-->
+     <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
+</head>
+<body>
+    <header id="header">
+        <button class="btnIconHeader" onclick="toogleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </button>
+
+        <div class="logoHeader">
+            <h1><a href="home.html" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a></h1>
+        </div>
+
+        <div class="navigationHeader" id="navigationHeader">
+            <button class="btnIconHeader" onclick="toogleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+            </button>
+            <a href="produtos.html">Produtos</a>
+            <a href="#">Contato</a>
+            <a href="login.html">Login</a>
+            <a href="cadastro.html">Cadastro</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Tela de Pagamento</h1>
+            <div class="pagamento-container">
+              <div class="pagamento-header">
+                <h2>Resumo do Pedido</h2>
+              </div>
+              <div class="pagamento-details">
+                <div class="pagamento-item">
+                  <span class="item-label">Produto:</span>
+                  <span class="item-value">Nome do Produto</span>
+                </div>
+                <div class="payment-item">
+                  <span class="item-label">Valor do Produto:</span>
+                  <span id="valorTotalItem" class="item-value"></span>
+                </div>
+                <div class="payment-item">
+                  <span class="item-label">Frete:</span>
+                  <span id="valorFrete" class="item-value"></span>
+                </div>
+                <div class="payment-item">
+                  <span class="item-label">Desconto:</span>
+                  <span id="valorDesconto" class="item-value"></span>
+                </div>
+                <div class="payment-total">
+                  <span class="item-label">Total:</span>
+                  <span id="valorTotal" class="item-value"></span>
+                </div>
+              </div>
+              <div class="pagamento-method">
+                <h2>Método de Pagamento</h2>
+                <div class="payment-options">
+                  <input type="radio" id="cartaoCredito" name="paymentOption" value="cartaoCredito" checked>
+                  <label for="cartaoCredito">Crédito</label>
+                  <input type="radio" id="pix" name="paymentOption" value="pix">
+                  <label for="pix">Pix</label>
+                </div>
+                <div id="cartaoCreditoFields">
+                  <input type="text" placeholder="Número do Cartão" required>
+                  <input type="text" placeholder="Nome do Titular" required>
+                  <input type="text" placeholder="Data de Validade" required>
+                  <input type="text" placeholder="CVV" required>
+                </div>
+                <div id="pixFields" style="display: none;">
+                  <h3>Opções de Pagamento Pix</h3>
+                  <div class="op1">
+                    <input type="radio" id="chavePixOption" name="pixPaymentOption" value="chavePix" checked>
+                    <label for="chav    ePixOption">Pagar com Chave Pix</label>
+                </div>
+                <div class="op2">
+                  <input type="radio" id="qrCodeOption" name="pixPaymentOption" value="qrCode">
+                  <label for="qrCodeOption">Pagar com QR Code</label>
+                </div>
+                </div>
+                <button type="submit">Pagar</button>
+              </div>
+            </div>
+          </div>
+          <script src="/script/pagamento.js"></script>   
+    </main>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Mercado IFPE</h1>
+                <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <h3>Link</h3>
+                <li>
+                    <a href="home.html" class="footer-link">Tela Inicial</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="produtos.html" class="footer-link">Produtos</a>
+                </li>
+                <li>
+                    <a href="cadastro.html" class="footer-link">Cadastro</a>
+                </li>
+                <li>
+                    <a href="sobre.html" class="footer-link">Sobre</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <h3>Suporte</h3>
+                <li>
+                    <a href="#" class="footer-link">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Características</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_copyright">
+            <p>&#169 2023 all rights reserved</p>
+        </div>
+    </footer>
+    
+    <script src="/script/sideBar.js"></script>
+    <script src="/script/transicaoImagens.js"></script>
+
+</body>
+</html>

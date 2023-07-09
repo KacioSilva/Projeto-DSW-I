@@ -8,6 +8,7 @@ let quantprodutos = 1
 let cart = [] // carrinho
 
 
+
 // funcoes auxiliares ou uteis
 const seleciona = (elemento) => document.querySelector(elemento)
 const selecionaTodos = (elemento) => document.querySelectorAll(elemento)
@@ -263,12 +264,19 @@ const atualizarCarrinho = () => {
 		//desconto = subtotal * 0.1
 		desconto = subtotal * 0
 		total = subtotal - desconto
+       
+        localStorage.setItem("valorTotalItem", total);
+        localStorage.setItem("valorDescontoCompra", desconto);
+         
 
 		// exibir na tela os resultados
 		// selecionar o ultimo span do elemento
 		seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal)
 		seleciona('.desconto span:last-child').innerHTML = formatoReal(desconto)
-		seleciona('.total span:last-child').innerHTML    = formatoReal(total)
+		seleciona('.total span:last-child').innerHTML = formatoReal(total)
+
+           
+
 
 	} else {
 		// ocultar o carrinho
@@ -280,11 +288,11 @@ const atualizarCarrinho = () => {
 const finalizarCompra = () => {
     seleciona('.cart--finalizar').addEventListener('click', () => {
         console.log('Finalizar compra')
-        seleciona('aside').classList.remove('show')
-        seleciona('aside').style.left = '100vw'
-        seleciona('header').style.display = 'flex'
+        window.location.href = 'pagamento.html';
     })
 }
+
+
 
 
 
@@ -341,3 +349,4 @@ adicionarNoCarrinho()
 atualizarCarrinho()
 fecharCarrinho()
 finalizarCompra()
+
