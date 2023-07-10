@@ -109,12 +109,14 @@ a:hover {
 .headerPagamento{
   text-align: center;
 }
+
 .headerPagamento h1{
   font-size: 40px;
 }
 .headerPagamento h3{
   font-size: 20px;
 }
+
 .bandeiras{
   display: block;
   font-size: 2rem;

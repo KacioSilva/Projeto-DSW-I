@@ -51,7 +51,14 @@
         <div class="mainLogin">
             <div class="rightLogin">
                 <div class="cardLogin">
-                    <h1>Login</h1>
+                    <div class="formHeader">
+                        <div class="formTitle">
+                            <h1>Login</h1>
+                        </div>
+                        <div class="formCadastro">
+                            <button><a href="cadastro.html" class="btnCadastro">Cadastre-se</a>
+                        </div>
+                    </div>
                     <form action="#" id="login">
                         <div class="textfield">
 
@@ -62,10 +69,10 @@
                             <label for="senha">Senha</label>
                             <input type="password" name="senha" id='senha' placeholder="Insira a sua senha" required>
                         </div>
-                        <div class="botoes">
-                            <a href="cadastro.html" class="btnCadastro">Cadastre-se</a>
-                            <button class="btnLogin" type="submit">Entrar</button>
-                        </div>
+                        <div class="error-container">
+                            <div id="error"></div>
+                          </div>   
+                        <button class="btnLogin" type="submit">Entrar</button>
                     </form>
                 </div>
             </div>

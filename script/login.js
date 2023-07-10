@@ -1,4 +1,5 @@
 const form = document.getElementById('login');
+const error = document.getElementById('error');
 
 form.addEventListener('submit', evento => {
     evento.preventDefault();
@@ -13,7 +14,8 @@ form.addEventListener('submit', evento => {
             if(item.CPF == cpf && item.Senha == senha){
                 console.log('login')
                 return window.location.href = 'home.html';
-                
+            }else{
+                error.innerHTML = "Senha ou usuário inválidos";
             }
         })
         console.log("conta inválida")
