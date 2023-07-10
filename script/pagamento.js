@@ -4,7 +4,6 @@ var valorTotalItem = localStorage.getItem("valorTotalItem"); //PEGANDO O VALOR T
 const valorTotalItemFloat = parseFloat(valorTotalItem); // VALOR TOTAL DE ITENS EM VALOR FLOAT
 
 
-
 var valorDescontoCompra = localStorage.getItem("valorDescontoCompra"); //PEGANDO O VALOR TOTAL DE DESCONTO
 const valorDescontoFloat = parseFloat(valorDescontoCompra); //VALOR DESCONTO EM VALOR FLOAT 
 
@@ -23,15 +22,12 @@ infoDesconto.textContent = ('R$: ' + valorDescontoFloat + ',00');
 infoTotal.textContent = ('R$: ' + (valorFrete + valorTotalItemFloat + valorDescontoFloat) + ',00');
 
 
-
-// Manipulador de evento para a seleção da opção de pagamento
+// Trocar os inputs de cartão pra pix e vice-versa
 document.querySelectorAll('input[name="paymentOption"]').forEach(function(option) {
     option.addEventListener('change', function() {
       var cartaoCreditoFields = document.getElementById('cartaoCreditoFields');
       var pixFields = document.getElementById('pixFields');
   
-
-      
       if (this.value === 'cartaoCredito') {
         cartaoCreditoFields.style.display = 'block';
         pixFields.style.display = 'none';
@@ -50,10 +46,13 @@ document.querySelectorAll('input[name="paymentOption"]').forEach(function(option
     const opcaoQrCode = document.getElementById('qrCodeOption');
     const opcaoCartao = document.getElementById('cartaoCredito');
     const radiosPix = document.querySelectorAll('input[name="pixPaymentOption"]');
+
+    
   
     botaoPagar.addEventListener('click', function(event) {
       event.preventDefault();
-  
+
+      
       if (opcaoCartao.checked) {
         // Desativar os radio buttons de PIX
         radiosPix.forEach(function(radio) {

@@ -103,7 +103,6 @@ a:hover {
 
 h1 {
   text-align: center;
-  color: #333;
 }
 
 .pagamento-container {
@@ -121,6 +120,7 @@ h1 {
 
 .pagamento-details {
   margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 
 .pagamento-item {
@@ -136,10 +136,14 @@ h1 {
 }
 
 .payment-total {
-  font-weight: bold;
+  font-weight: 800;
   margin-top: 10px;
+  font-size: 1.5rem;
+  color: #4CAF50;
 }
-
+#error{
+  color:red;
+}
 .selecaoTipo {
   display: flex;
   gap: 5rem;
@@ -172,6 +176,15 @@ button[type="submit"] {
   border-radius: 15px;
   cursor: pointer;
   margin-top: 2rem;
+}
+#formulario{
+    flex-direction: column;
+    z-index: 5;
+    padding-right: 5rem;
+    max-height: 30rem;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    margin-left: 2rem;
 }
 
 .pagamento-options {
