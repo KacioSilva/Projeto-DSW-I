@@ -94,11 +94,36 @@ a:hover {
 
 /*--------------------------------------------------------------------------------*/
 .container {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 5px;
   padding: 20px;
+}
+.headMetodoPagamento{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  
+}
+.headerPagamento{
+  text-align: center;
+}
+.headerPagamento h1{
+  font-size: 40px;
+}
+.headerPagamento h3{
+  font-size: 20px;
+}
+.bandeiras{
+  display: block;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+.bandeiraPix{
+  display: none;
+  font-size: 4rem;
+  margin-left: 2rem;
 }
 
 h1 {
@@ -175,7 +200,7 @@ input[type="text"] {
   border-radius: 3px;
 }
 
-button[type="submit"] {
+.confirmar{
   display: block;
   width: 100%;
   padding: 10px;
@@ -185,13 +210,19 @@ button[type="submit"] {
   border-radius: 15px;
   cursor: pointer;
   margin-top: 2rem;
+  transition: 0.5s;
+}
+.confirmar:hover{
+  background-color: #429b45;
+  transform: translatey(-5px);
 }
 #formulario{
     flex-direction: column;
     z-index: 5;
-    padding-right: 5rem;
+    padding-right: 2rem;
     max-height: 30rem;
     overflow-y: scroll;
+   
     flex-wrap: nowrap;
     margin-left: 2rem;
 }
@@ -207,7 +238,7 @@ button[type="submit"] {
 }
 
 #cartaoCreditoFields {
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
 }
 
 #pixFields {
@@ -330,6 +361,16 @@ footer h3 {
     top {
       margin-left: -10vw;
     }
+  }
+}
+@media (max-width:633px){
+  .headMetodoPagamento h2{
+    font-size: 20px;
+  }
+  .headMetodoPagamento{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 

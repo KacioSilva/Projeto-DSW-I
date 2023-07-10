@@ -30,24 +30,39 @@ document.querySelectorAll('input[name="paymentOption"]').forEach(function (optio
     var cartaoCreditoFields = document.getElementById('cartaoCreditoFields');
     var pixFields = document.getElementById('pixFields');
 
-    if (this.value === 'cartaoCredito') {
+    var bandeirasCartao = document.getElementById('bandeiraCartao');
+    var bandeiraPix = document.getElementById('bandeiraPix');
+
+    if (this.value === 'cartaoCredito') {  //-------------se a opção selecionada for CARTÃO
       cartaoCreditoFields.style.display = 'block';
       pixFields.style.display = 'none';
       metodoPagamento = 'cartao';
+      erro.innerHTML = ""
+
+      bandeiraPix.style.display = 'none';
+      bandeirasCartao.style.display = 'block'
+
+      nomeTitular.required = true;
+      cvv.required = true;
+      dataValidade.required = true;
+      numCartao.required = true;
       console.log('método de pagamento: ', metodoPagamento)
 
-     
-    } else if (this.value === 'pix') {
+    } else if (this.value === 'pix') { //-------------se a opção selecionada for PIX
       cartaoCreditoFields.style.display = 'none';
       pixFields.style.display = 'block';
       metodoPagamento = 'pix';
+      erro.innerHTML = ""
+
+      bandeiraPix.style.display = 'flex';
+      bandeirasCartao.style.display = 'none'
+
+      nomeTitular.required = false;
+      cvv.required = false;
+      dataValidade.required = false;
+      numCartao.required = false;
       console.log('método de pagamento: ', metodoPagamento)
       
-    }
-    if(this.value === 'qrCode'){
-      alert('OPÇÃO QRCODE');
-    }else if(this.value === 'chavePix'){
-      alert('OPÇÃO CHAVE');
     }
   });
 });
@@ -98,25 +113,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const numero = document.getElementById('numero').value;
 
     let statusCep = cep.length === 9;
-    
-    //VERIFICAÇÃO DOS INPUTS
-    if (!statusNumCartao) {
-      erro.innerHTML = " cartao invalido";
-    } else if (!statusCvv) {
-      erro.innerHTML = "cvv inválido";
-    } else if (!statusDataValidade) {
-      erro.innerHTML = "Data inválida";
-    } else if (nomeTitular.length < 2) {
-      erro.innerHTML = "Nome de titular inválido";
-    } else if (!statusCep) {
-      erro.innerHTML = "Cep inválido";
-    } else if (rua.length < 3) {
-      erro.innerHTML = "Rua inválida";
-    } else if (numero.length === 0) {
-      erro.innerHTML = "Número inválido";
-    }
 
-    //VERIFICAÇÃO DE QUAL OPÇÃO FOI SELECIONADA (PIX OU CARTÃO)
+    //VERIFICAÇÃO DOS INPUTS
+
+    if(metodoPagamento === 'cartao'){
+      if (!statusNumCartao) {
+        erro.innerHTML = " cartao invalido";
+      } else if (!statusCvv) {
+        erro.innerHTML = "cvv inválido";
+      } else if (!statusDataValidade) {
+        erro.innerHTML = "Data inválida";
+      } else if (nomeTitular.length < 2) {
+        erro.innerHTML = "Nome de titular inválido";
+      } else if (!statusCep) {
+        erro.innerHTML = "Cep inválido";
+      } else if (rua.length < 3) {
+        erro.innerHTML = "Rua inválida";
+      } else if (numero.length === 0) {
+        erro.innerHTML = "Número inválido";
+      }
+    }else if(metodoPagamento === 'pix'){
+      if (!statusCep) {
+        erro.innerHTML = "Cep inválido";
+      } else if (rua.length < 3) {
+        erro.innerHTML = "Rua inválida";
+      } else if (numero.length === 0) {
+        erro.innerHTML = "Número inválido";
+      }
+    }
     
   });
 });

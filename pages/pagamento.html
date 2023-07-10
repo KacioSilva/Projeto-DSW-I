@@ -55,7 +55,9 @@
   </header>
   <main>
     <div class="container">
-      <h1>Finalize a sua Compra!</h1>
+      <div class="headerPagamento">
+        <h1>Falta Pouco! <h1> <h3>Finalize a sua Compra!</h3>
+      </div>
       <div class="pagamento-container">
         <div class="pagamento-header">
           <h2>Resumo do Pedido</h2>
@@ -87,10 +89,23 @@
         <form action="" id="formulario">
         
           <div class="pagamento-method">
-            <h2>Método de Pagamento</h2>
+            <div class="headMetodoPagamento">
+              <h2>Método de Pagamento</h2>
+              <div class="bandeiras" id="bandeiraCartao">
+                <i class="fab fa-cc-visa" style="color: #2ec5ea;"></i> <!--VISA-->
+                <i class="fab fa-cc-amazon-pay" style="color: #2ec5ea;"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+              </div>
+              <div class="bandeiraPix" id="bandeiraPix">
+                <i class="fa-brands fa-pix" style="color: #2ec5ea;"></i>
+              </div>
+            </div>
+
             <div class="pagamento-options">   <!------opções de pagamento----->
+              <i class="fa-regular fa-credit-card"></i>
               <input type="radio" id="cartaoCredito" name="paymentOption" value="cartaoCredito" checked>
               <label for="cartaoCredito">Crédito</label>
+              <i class="fa-brands fa-pix" style="color: #2ec5ea;"></i>
               <input type="radio" id="pix" name="paymentOption" value="pix">
               <label for="pix">Pix</label>
             </div>
@@ -123,7 +138,7 @@
             <div class="error-container">
               <div id="error"></div>
             </div>
-            <button type="submit">Confirmar</button>
+            <button type="submit" class="confirmar">Confirmar</button>
         </form>
       </div>
     </div>
