@@ -64,3 +64,17 @@ function formatCartao(input){
     
     input.value = cartao;
 }
+
+function formatCep(input){
+    let cep = input.value.replace(/\D/g, '');
+
+    cep = cep.replace(/(\d{5})(\d)/, '$1-$2');
+  
+    input.value = cep;
+}
+function formatNumero(input){
+    let numero = input.value.replace(/\D/g, '');
+  
+    input.value = numero;
+}
+

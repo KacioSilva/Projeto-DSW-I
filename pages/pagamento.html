@@ -96,10 +96,10 @@
             </div>
 
             <div id="cartaoCreditoFields">  <!------inputs cartão----->
-              <input type="text" id="numCartao" placeholder="Número do Cartão" oninput="formatCartao(this)" maxlength="19" required>
-              <input type="text" id="nomeTitular" placeholder="Nome do Titular" oninput="formatNome(this)" required>
-              <input type="text" id="dataValidade" placeholder="Data de Validade" oninput="formatDataValidade(this)" maxlength="5" required>
-              <input type="text" id="cvv" placeholder="CVV" oninput="formatCvv(this)" maxlength="3" required>
+              <input type="text" id="numCartao" name="numCartao" placeholder="Número do Cartão" oninput="formatCartao(this)" maxlength="19" required>
+              <input type="text" id="nomeTitular" name="nomeTitular" placeholder="Nome do Titular" oninput="formatNome(this)" required>
+              <input type="text" id="dataValidade" name="dataValidade" placeholder="Data de Validade" oninput="formatDataValidade(this)" maxlength="5" required>
+              <input type="text" id="cvv" name="cvv" placeholder="CVV" oninput="formatCvv(this)" maxlength="3" required>
             </div>
 
             <div id="pixFields" style="display: none;">  <!-----inputs pix----->
@@ -115,13 +115,15 @@
             </div>
             <div class="endereco-entrega">
               <h2>Endereço de Entrega</h2>
-              <input type="text" placeholder="CEP" required>
-              <input type="text" placeholder="Rua" required>
-              <input type="text" placeholder="Número" required>
-              <input type="text" placeholder="Complemento" required>
+              <input type="text" id="cep" name="cep" placeholder="CEP" oninput="formatCep(this)" maxlength="9" required>
+              <input type="text" id="rua" name="rua" placeholder="Rua" oninput="formatNome(this)" required>
+              <input type="text" id="numero" name="numero" placeholder="Número" oninput="formatNumero(this)" maxlength="5" required>
+              <input type="text" id="complemento" name="complemento" placeholder="Complemento" maxlength="30">
             </div>
-              <div id="error">teste</div>
-            <button type="submit">Confirmar </button>
+            <div class="error-container">
+              <div id="error"></div>
+            </div>
+            <button type="submit">Confirmar</button>
         </form>
       </div>
     </div>
@@ -191,7 +193,5 @@
   <script src="/script/transicaoImagens.js"></script>
   <script src="/script/mascara.js"></script>
   <script src="/script/pagamento.js"></script>
-
 </body>
-
 </html>

@@ -141,9 +141,18 @@ h1 {
   font-size: 1.5rem;
   color: #4CAF50;
 }
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
 #error{
   color:red;
+  font-weight: 700;
 }
+
 .selecaoTipo {
   display: flex;
   gap: 5rem;
