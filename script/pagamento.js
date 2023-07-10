@@ -35,6 +35,7 @@ document.querySelectorAll('input[name="paymentOption"]').forEach(function(option
       if (this.value === 'cartaoCredito') {
         cartaoCreditoFields.style.display = 'block';
         pixFields.style.display = 'none';
+        
 
       } else if (this.value === 'pix') {
         cartaoCreditoFields.style.display = 'none';
@@ -43,14 +44,31 @@ document.querySelectorAll('input[name="paymentOption"]').forEach(function(option
     });
   });
   
-  // Manipulador de evento para a seleção da opção de pagamento Pix
-  document.querySelectorAll('input[name="pixPaymentOption"]').forEach(function(option) {
-    option.addEventListener('change', function() {
-      // Adicione aqui a lógica para processar o pagamento com Pix
-      if (this.value === 'chavePix') {
-        alert('Pagamento com Chave Pix selecionado');
-      } else if (this.value === 'qrCode') {
-        alert('Pagamento com QR Code selecionado');
+  document.addEventListener('DOMContentLoaded', function() {
+    const botaoPagar = document.querySelector('button[type="submit"]');
+    const opcaoChavePix = document.getElementById('chavePixOption');
+    const opcaoQrCode = document.getElementById('qrCodeOption');
+    const opcaoCartao = document.getElementById('cartaoCredito');
+    const radiosPix = document.querySelectorAll('input[name="pixPaymentOption"]');
+  
+    botaoPagar.addEventListener('click', function(event) {
+      event.preventDefault();
+  
+      if (opcaoCartao.checked) {
+        // Desativar os radio buttons de PIX
+        radiosPix.forEach(function(radio) {
+          radio.disabled = true;
+        });
+  
+        alert('Pagamento por Cartão selecionado.');
+      } else {
+        if (opcaoChavePix.checked) {
+          alert('Pagamento com Chave PIX selecionado.');
+        } else if (opcaoQrCode.checked) {
+          alert('Pagamento com QR Code selecionado.');
+        } else {
+          alert('Por favor, selecione uma opção de pagamento.');
+        }
       }
     });
   });
