@@ -1,3 +1,39 @@
+//------------abrir e fechar modal
+const abrirModal = () => {
+  document.querySelector('.modalWindowArea').style.opacity = 0 // transparente
+  document.querySelector('.modalWindowArea').style.display = 'flex'
+  setTimeout(() => document.querySelector('.modalWindowArea').style.opacity = 1, 150)
+}
+
+const fecharModal = () => {
+  document.querySelector('.modalWindowArea').style.opacity = 0 // transparente
+  setTimeout(() => document.querySelector('.modalWindowArea').style.display = 'none', 500)
+  chave = '';
+}
+
+//--------------GERAR CHAVE ALEATÓRIA
+let chave = '';
+function gerarChaveAleatoria() {
+  const possibilidadeLetras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const tamanhoChave = 20;
+ 
+  for (let i = 0; i < tamanhoChave; i++) {
+    const randomIndex = Math.floor(Math.random() * possibilidadeLetras.length);
+    chave += possibilidadeLetras.charAt(randomIndex);
+  }
+  return console.log(chave);
+}
+
+//--------------GERAR QRCODE
+function gerarQrCode(){
+  var inputUsuario = chave;
+  var googleChartApi = 'https://chart.googleapis.com/chart?cht=qr&chs=250x200&chl=';
+  var conteudoQrCode = googleChartApi + inputUsuario;
+  document.querySelector('#QRCodeImage').src = conteudoQrCode;
+}
+
+
+
 //pegando os dados da compra
 
 var valorTotalItem = localStorage.getItem("valorTotalItem"); //PEGANDO O VALOR TOTAL DE ITENS
@@ -131,16 +167,33 @@ document.addEventListener('DOMContentLoaded', function () {
         erro.innerHTML = "Rua inválida";
       } else if (numero.length === 0) {
         erro.innerHTML = "Número inválido";
+      }else{
+        alert('Pagamento realizado com sucesso. Obrigado pela preferência!');
+        window.location.href = 'home.html';
       }
-    }else if(metodoPagamento === 'pix'){
+    }
+
+    else if(metodoPagamento === 'pix'){
       if (!statusCep) {
         erro.innerHTML = "Cep inválido";
       } else if (rua.length < 3) {
         erro.innerHTML = "Rua inválida";
       } else if (numero.length === 0) {
         erro.innerHTML = "Número inválido";
+      }else{
+        if(statusOpcao === 2){
+          document.querySelector('#QRCodeImage').style.display = 'block';
+          abrirModal();
+          gerarChaveAleatoria();
+          gerarQrCode();
+        }else if(statusOpcao === 1){
+          document.querySelector('#QRCodeImage').style.display = 'none';
+          abrirModal();
+          gerarChaveAleatoria();
+          document.querySelector('#chaveAleatoria').innerHTML = 'Faça o pagamento utilizando a Chave Pix: ' + chave;
+         
+        }
       }
     }
-    
   });
 });
