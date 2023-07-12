@@ -92,42 +92,59 @@ a:hover {
   color: var(--text-color);
 }
 .modalWindowArea {
-  position:fixed;
-  left:0;
-  top:0;
-  bottom:0;
-  right:0;
-  background-color:rgba(255, 255, 255, 0.5);
-  display:none;
-  transition: all ease .5s;
-  justify-content: center;
-  align-items: center;
-
-}
-.modalWindowBody {
-  width:500px;
-  height: 20rem;
-  background-color:#FFF;
-  border-radius:10px;
-  box-shadow:0px 0px 15px #999;
-  display:flex;
-  margin:20px 0px;
-}
-.modalQrCode {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  margin-left: 15rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
-.modalQrCode img {
+.modalWindowBody {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.produtoInfo--cancelMobileButton {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.modalQrCode {
+  margin-bottom: 20px;
+}
+
+#QRCodeImage {
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
 }
-.chaveAleatoria{
-  color:red;
+
+.chaveAleatoria {
+  margin-bottom: 20px;
 }
+
+#chaveAleatoria {
+  font-size: 18px;
+}
+
+.produtoInfo--cancelButton {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .produtoInfo--cancelMobileButton{
   cursor: pointer;
 }

@@ -6,9 +6,10 @@ const abrirModal = () => {
 }
 
 const fecharModal = () => {
+  document.querySelector('#chaveAleatoria').innerHTML = '';
+  chave = '';
   document.querySelector('.modalWindowArea').style.opacity = 0 // transparente
   setTimeout(() => document.querySelector('.modalWindowArea').style.display = 'none', 500)
-  chave = '';
 }
 
 //--------------GERAR CHAVE ALEATÓRIA
