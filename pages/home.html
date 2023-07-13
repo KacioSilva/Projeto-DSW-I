@@ -69,6 +69,14 @@
                 <l1><img src="/assets/images/imageRow/ipAmarelo.png" onclick="slider('/assets/images/imageGeral/ip-amarelo.png')"> </l1> 
             </div>
         </div>
+        <!-- janela modal .produtoWindowArea -->
+        <div class="modalWindowArea">
+            <div class="modalWindowBody">
+                <div id="text">AQUII</div>
+                <div class="produtoInfo--cancelMobileButton" onclick="fecharModal()">Fechar</div>
+            </div>
+        </div>
+  
     </main>
     <footer>
         <div id="footer_content">
@@ -95,13 +103,11 @@
             </div>
             
             <ul class="footer-list">
-                <h3>Link</h3>
+                <h3>Navegação</h3>
                 <li>
                     <a href="home.html" class="footer-link">Tela Inicial</a>
                 </li>
-                <li>
-                    <a href="#" class="footer-link">Contato</a>
-                </li>
+                
                 <li>
                     <a href="produtos.html" class="footer-link">Produtos</a>
                 </li>
@@ -109,8 +115,10 @@
                     <a href="cadastro.html" class="footer-link">Cadastro</a>
                 </li>
                 <li>
-                    <a href="sobre.html" class="footer-link">Sobre</a>
+                    <a href="login.html" class="footer-link">Login</a>
                 </li>
+                
+                
             </ul>
 
             <ul class="footer-list">
@@ -119,10 +127,10 @@
                     <a href="#" class="footer-link">Como Funciona</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Contato</a>
+                    <a class="footer-link" onclick="abrirModal('contato')">Contato</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Características</a>
+                    <a class="footer-link" onclick="abrirModal('sobre')">Sobre</a>
                 </li>
             </ul>
         </div>
@@ -133,6 +141,7 @@
     
     <script src="/script/sideBar.js"></script>
     <script src="/script/transicaoImagens.js"></script>
-
+    <script src="/script/modalTelaInicial.js"></script>
+    <script src="/script/informacoesGerais.js"></script>
 </body>
 </html>

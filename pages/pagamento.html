@@ -89,13 +89,13 @@
         <!-- janela modal .produtoWindowArea -->
         <div class="modalWindowArea">
           <div class="modalWindowBody">
-              <div class="produtoInfo--cancelMobileButton" onclick="fecharModal()">Cancelar</div>
               <div class="modalQrCode">
                   <img id="QRCodeImage">
               </div>
               <div class="chaveAleatoria">
                 <p id="chaveAleatoria"></p>
               </div>
+              <div class="produtoInfo--cancelMobileButton" onclick="fecharModal()">Cancelar</div>
           </div>
       </div>
 
@@ -158,68 +158,68 @@
   </main>
   <footer>
     <div id="footer_content">
-      <div id="footer_contacts">
-        <h1>Mercado IFPE</h1>
-        <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
+        <div id="footer_contacts">
+            <h1>Mercado IFPE</h1>
+            <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
 
-        <div id="footer_social_media">
-          <a href="#" class="footer-link" id="instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
+            <div id="footer_social_media">
+                <a href="#" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-          <a href="#" class="footer-link" id="facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
+                <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
 
-          <a href="#" class="footer-link" id="whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-          <a href="#" class="footer-link" id="twitter">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
+                <a href="#" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#" class="footer-link" id="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
         </div>
-      </div>
+        
+        <ul class="footer-list">
+            <h3>Navegação</h3>
+            <li>
+                <a href="home.html" class="footer-link">Tela Inicial</a>
+            </li>
+            
+            <li>
+                <a href="produtos.html" class="footer-link">Produtos</a>
+            </li>
+            <li>
+                <a href="cadastro.html" class="footer-link">Cadastro</a>
+            </li>
+            <li>
+                <a href="login.html" class="footer-link">Login</a>
+            </li>
+            
+        </ul>
 
-      <ul class="footer-list">
-        <h3>Link</h3>
-        <li>
-          <a href="home.html" class="footer-link">Tela Inicial</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Contato</a>
-        </li>
-        <li>
-          <a href="produtos.html" class="footer-link">Produtos</a>
-        </li>
-        <li>
-          <a href="cadastro.html" class="footer-link">Cadastro</a>
-        </li>
-        <li>
-          <a href="sobre.html" class="footer-link">Sobre</a>
-        </li>
-      </ul>
-
-      <ul class="footer-list">
-        <h3>Suporte</h3>
-        <li>
-          <a href="#" class="footer-link">Como Funciona</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Contato</a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">Características</a>
-        </li>
-      </ul>
+        <ul class="footer-list">
+            <h3>Suporte</h3>
+            <li>
+                <a href="#" class="footer-link">Como Funciona</a>
+            </li>
+            <li>
+                <a class="footer-link" onclick="abrirModal('contato')">Contato</a>
+            </li>
+            <li>
+                <a class="footer-link" onclick="abrirModal('sobre')">Sobre</a>
+            </li>
+        </ul>
     </div>
     <div id="footer_copyright">
-      <p>&#169 2023 all rights reserved</p>
+        <p>&#169 2023 all rights reserved</p>
     </div>
-  </footer>
+</footer>
 
   <script src="/script/sideBar.js"></script>
   <script src="/script/transicaoImagens.js"></script>
   <script src="/script/mascara.js"></script>
   <script src="/script/pagamento.js"></script>
+  <script src="/script/informacoesGerais.js"></script>
 </body>
 </html>

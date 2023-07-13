@@ -7,7 +7,7 @@ form.addEventListener('submit', evento => {
     const cpf = document.getElementById('usuario').value;
     const senha = document.getElementById('senha').value;
 
-    fetch('/script/usuarios.json')
+    fetch('/script/json/usuarios.json')
     .then(e=>e.json())
     .then(e=>{
         e.usuario.map((item)=>{
@@ -21,5 +21,4 @@ form.addEventListener('submit', evento => {
         })
         console.log("conta inválida")
     })
-
 })
