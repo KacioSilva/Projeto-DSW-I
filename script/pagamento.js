@@ -14,18 +14,17 @@ const fecharModal = () => {
   document.querySelector('.modalWindowArea').style.opacity = 0 // transparente
   setTimeout(() => document.querySelector('.modalWindowArea').style.display = 'none', 500)
   statusPagamento = false;
-  console.log(statusPagamento);
- 
 }
 
 function finalizarCompra() {
   setTimeout(function() {
     if(statusPagamento == true){
+      alert('Pagamento Realizado com sucesso! Obrigado pela preferência!')
       window.location.href = "home.html";
     }else if(statusPagamento == false){
     }
    
-  }, 10000); // 10000 milissegundos = 10 segundos
+  }, 18000); // 10000 milissegundos = 10 segundos
 }
 
 //--------------GERAR CHAVE ALEATÓRIA

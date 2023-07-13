@@ -13,6 +13,7 @@ form.addEventListener('submit', evento => {
         e.usuario.map((item)=>{
             if(item.CPF == cpf && item.Senha == senha){
                 console.log('login')
+                alert('Login Realizado com Sucesso! Aproveite nossas Promoções!')
                 return window.location.href = 'home.html';
             }else{
                 error.innerHTML = "Senha ou usuário inválidos";
@@ -22,6 +23,3 @@ form.addEventListener('submit', evento => {
     })
 
 })
-
-
-
