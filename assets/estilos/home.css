@@ -85,9 +85,19 @@ body {
   .modalWindowBody {
     background-color: #fff;
     border-radius: 8px;
+    height: 15rem;
     padding: 20px;
     max-width: 400px;
     text-align: center;
+  }
+  #text{
+    margin-bottom: 2rem;
+    height: 7rem;
+  }
+  #tipo{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
   }
   
   .produtoInfo--cancelMobileButton {
