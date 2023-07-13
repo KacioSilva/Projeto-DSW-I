@@ -1,15 +1,31 @@
+let statusPagamento = true;
 //------------abrir e fechar modal
 const abrirModal = () => {
   document.querySelector('.modalWindowArea').style.opacity = 0 // transparente
   document.querySelector('.modalWindowArea').style.display = 'flex'
   setTimeout(() => document.querySelector('.modalWindowArea').style.opacity = 1, 150)
+  statusPagamento = true;
 }
+
 
 const fecharModal = () => {
   document.querySelector('#chaveAleatoria').innerHTML = '';
   chave = '';
   document.querySelector('.modalWindowArea').style.opacity = 0 // transparente
   setTimeout(() => document.querySelector('.modalWindowArea').style.display = 'none', 500)
+  statusPagamento = false;
+  console.log(statusPagamento);
+ 
+}
+
+function finalizarCompra() {
+  setTimeout(function() {
+    if(statusPagamento == true){
+      window.location.href = "home.html";
+    }else if(statusPagamento == false){
+    }
+   
+  }, 10000); // 10000 milissegundos = 10 segundos
 }
 
 //--------------GERAR CHAVE ALEATÓRIA
@@ -187,12 +203,15 @@ document.addEventListener('DOMContentLoaded', function () {
           abrirModal();
           gerarChaveAleatoria();
           gerarQrCode();
+
         }else if(statusOpcao === 1){
           document.querySelector('#QRCodeImage').style.display = 'none';
           abrirModal();
           gerarChaveAleatoria();
           document.querySelector('#chaveAleatoria').innerHTML = 'Faça o pagamento utilizando a Chave Pix: ' + chave;
-         
+        }
+        if(statusPagamento == true){
+          finalizarCompra();
         }
       }
     }
