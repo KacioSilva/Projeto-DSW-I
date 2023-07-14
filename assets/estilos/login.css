@@ -83,6 +83,7 @@ a {
     font-size: 15px;
     color: white;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 a:hover {

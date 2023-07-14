@@ -19,7 +19,7 @@ const formatoReal = (valor) => {
 
 const formatoMonetario = (valor) => {
     if(valor) {
-        return valor.toFixed(2)
+        return 'R$ ' + valor.toFixed(3)
     }
 }
 
@@ -131,6 +131,7 @@ const adicionarNoCarrinho = () => {
     	console.log("Quant. " + quantprodutos)
         // preco
         let price = seleciona('.produtoInfo--actualPrice').innerHTML.replace('R$&nbsp;', '')
+
     
         // crie um identificador que junte id e tamanho
 	    // concatene as duas informacoes separadas por um símbolo, vc escolhe
@@ -152,12 +153,12 @@ const adicionarNoCarrinho = () => {
                 size, // size: size
                 qt: quantprodutos,
                 price: parseFloat(price) // price: price
+             
             }
             cart.push(produto)
             console.log(produto)
-            console.log('Sub total R$ ' + (produto.qt * produto.price).toFixed(2))
+            console.log('Sub total R$ ' + (produto.qt * produto.price).toFixed(3))
         }
-
         fecharModal()
         abrirCarrinho()
         atualizarCarrinho()
@@ -265,15 +266,15 @@ const atualizarCarrinho = () => {
 		desconto = subtotal * 0
 		total = subtotal - desconto
        
-        localStorage.setItem("valorTotalItem", total);
+        localStorage.setItem("valorTotalItem", total*1000);
         localStorage.setItem("valorDescontoCompra", desconto);
          
 
 		// exibir na tela os resultados
 		// selecionar o ultimo span do elemento
-		seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal)
+		seleciona('.subtotal span:last-child').innerHTML = formatoMonetario(subtotal)
 		seleciona('.desconto span:last-child').innerHTML = formatoReal(desconto)
-		seleciona('.total span:last-child').innerHTML = formatoReal(total)
+		seleciona('.total span:last-child').innerHTML = formatoMonetario(total)
 
            
 
@@ -291,7 +292,6 @@ const finalizarCompra = () => {
         window.location.href = 'pagamento.html';
     })
 }
-
 
 
 

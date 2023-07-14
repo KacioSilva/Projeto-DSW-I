@@ -77,4 +77,3 @@ function formatNumero(input){
   
     input.value = numero;
 }
-

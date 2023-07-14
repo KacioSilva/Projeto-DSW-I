@@ -52,6 +52,7 @@ header{
     color: var(--text-color);
     transition: 0.5s;
     height: bold;
+    cursor: pointer;
 }
 .btnIconHeader{
     display: none;

@@ -53,11 +53,13 @@ function gerarQrCode(){
 //pegando os dados da compra
 
 var valorTotalItem = localStorage.getItem("valorTotalItem"); //PEGANDO O VALOR TOTAL DE ITENS
-const valorTotalItemFloat = parseFloat(valorTotalItem); // VALOR TOTAL DE ITENS EM VALOR FLOAT
+let valorTotalItemFloat = parseFloat(valorTotalItem); // VALOR TOTAL DE ITENS EM VALOR FLOAT
+
 
 
 var valorDescontoCompra = localStorage.getItem("valorDescontoCompra"); //PEGANDO O VALOR TOTAL DE DESCONTO
 const valorDescontoFloat = parseFloat(valorDescontoCompra); //VALOR DESCONTO EM VALOR FLOAT 
+
 
 
 //PEGANDO O ID DOS SPANS E COLOCANDO EM VARIÁVEIS
@@ -67,10 +69,11 @@ const infoFrete = document.getElementById('valorFrete');
 const valorFrete = 10;
 const infoTotal = document.getElementById('valorTotal');
 
+
 //SETANDO OS VALORES DO SPAN
 infoTotalItens.textContent = ('R$: ' + valorTotalItemFloat + ',00');
 infoFrete.textContent = ('R$: ' + valorFrete + ',00');
-infoDesconto.textContent = ('R$: ' + valorDescontoFloat + ',00');
+infoDesconto.textContent = ('R$: - ' + valorDescontoFloat + ',00');
 infoTotal.textContent = ('R$: ' + (valorFrete + valorTotalItemFloat + valorDescontoFloat) + ',00');
 
 

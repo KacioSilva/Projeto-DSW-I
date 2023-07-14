@@ -60,6 +60,7 @@ header{
     color: var(--text-color);
     transition: 0.5s;
     height: bold;
+    cursor: pointer;
 }
 .btnIconHeader{
     display: none;
@@ -79,6 +80,7 @@ header{
     align-items: center;
     justify-content: center;
     transition: opacity 0.5s ease, transform 0.3s ease;
+    z-index: 1;
   }
   
   .modalWindowBody {
