@@ -55,26 +55,36 @@ function gerarQrCode(){
 var valorTotalItem = localStorage.getItem("valorTotalItem"); //PEGANDO O VALOR TOTAL DE ITENS
 let valorTotalItemFloat = parseFloat(valorTotalItem); // VALOR TOTAL DE ITENS EM VALOR FLOAT
 
-
-
 var valorDescontoCompra = localStorage.getItem("valorDescontoCompra"); //PEGANDO O VALOR TOTAL DE DESCONTO
 const valorDescontoFloat = parseFloat(valorDescontoCompra); //VALOR DESCONTO EM VALOR FLOAT 
 
+const valorFrete = 10.00;
+const totalCompra = (valorTotalItemFloat + valorFrete);
+
+
+//FORMATANDO O VALOR TOTAL DOS PRODUTOS
+
+let opcoes = {
+  maximumFractionDigits: 2,
+  useGrouping: true
+};
+let valorProdutoFormatado = valorTotalItemFloat.toLocaleString('pt-BR', opcoes);
+let valorTotalFormatado = totalCompra.toLocaleString('pt-BR', opcoes);
 
 
 //PEGANDO O ID DOS SPANS E COLOCANDO EM VARIÁVEIS
 const infoTotalItens = document.getElementById('valorTotalItem');
 const infoDesconto = document.getElementById('valorDesconto');
 const infoFrete = document.getElementById('valorFrete');
-const valorFrete = 10;
 const infoTotal = document.getElementById('valorTotal');
 
 
+
 //SETANDO OS VALORES DO SPAN
-infoTotalItens.textContent = ('R$: ' + valorTotalItemFloat + ',00');
+infoTotalItens.textContent = ('R$: ' + valorProdutoFormatado + ',00');
 infoFrete.textContent = ('R$: ' + valorFrete + ',00');
 infoDesconto.textContent = ('R$: - ' + valorDescontoFloat + ',00');
-infoTotal.textContent = ('R$: ' + (valorFrete + valorTotalItemFloat + valorDescontoFloat) + ',00');
+infoTotal.textContent = ('R$: ' + valorTotalFormatado + ',00');
 
 
 // Trocar os inputs de cartão pra pix e vice-versa
