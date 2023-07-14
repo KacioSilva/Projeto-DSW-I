@@ -92,7 +92,7 @@ body {
   }
   #text{
     margin-bottom: 2rem;
-    height: 7rem;
+    height: 8rem;
   }
   #tipo{
     font-size: 20px;
@@ -100,7 +100,7 @@ body {
     margin-bottom: 1rem;
   }
   
-  .produtoInfo--cancelMobileButton {
+  .cancelMobileButton {
     background-color: #2797a1;
     color: #fff;
     padding: 10px 20px;

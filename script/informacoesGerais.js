@@ -14,5 +14,12 @@ var json = {
     {
       "tipo": "Contato"
     }
+  ],
+  "comoFunciona":[
+    {
+      "conteudo": "Através do nosso site, você pode selecionar os produtos desejados e realizar o pagamento. Em poucos dias, através do serviço dos Correios, você receberá a sua entrega. Não esqueça de realizar o seu cadastro para continuar!"
+    },{
+      "tipo": "Como Funciona"
+    }
   ]
 };

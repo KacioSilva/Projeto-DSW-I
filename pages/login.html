@@ -48,6 +48,14 @@
         </div>
     </header>
     <div class="main" id="main" tabindex="0" onclick="closeSidebar()">
+         <!-- janela modal .modalWindowArea -->
+         <div class="modalWindowArea">
+            <div class="modalWindowBody">
+                <div id="tipo"></div>
+                <div id="text"></div>
+                <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
+            </div>
+        </div>
         <div class="mainLogin">
             <div class="rightLogin">
                 <div class="cardLogin">
@@ -129,13 +137,13 @@
             <ul class="footer-list">
                 <h3>Suporte</h3>
                 <li>
-                    <a href="#" class="footer-link">Como Funciona</a>
+                    <a class="footer-link" onclick="abrirModalInfo('comoFunciona')">Como Funciona</a>
                 </li>
                 <li>
-                    <a class="footer-link" onclick="abrirModal('contato')">Contato</a>
+                    <a class="footer-link" onclick="abrirModalInfo('contato')">Contato</a>
                 </li>
                 <li>
-                    <a class="footer-link" onclick="abrirModal('sobre', 'tipo')">Sobre</a>
+                    <a class="footer-link" onclick="abrirModalInfo('sobre')">Sobre</a>
                 </li>
             </ul>
         </div>
@@ -147,6 +155,7 @@
     <script src="/script/mascara.js"></script>
     <script src="/script/login.js"></script>
     <script src="/script/informacoesGerais.js"></script>
+    <script src="/script/modalTelaInicial.js"></script>
 
 </body>
 </html>

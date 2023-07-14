@@ -1,4 +1,4 @@
-const abrirModal = (conteudo, tipo) => {
+const abrirModalInfo = (conteudo, tipo) => {
   document.querySelector('.modalWindowArea').style.opacity = 0; // transparente
   document.querySelector('.modalWindowArea').style.display = 'flex';
   setTimeout(() => document.querySelector('.modalWindowArea').style.opacity = 1, 150);
@@ -9,7 +9,7 @@ const abrirModal = (conteudo, tipo) => {
   divTipo.textContent = json[conteudo][1].tipo;
 }
 
-const fecharModal = () => {
+const fecharModalInfo = () => {
   document.querySelector('.modalWindowArea').style.opacity = 0 // transparente
   setTimeout(() => document.querySelector('.modalWindowArea').style.display = 'none', 500)
 

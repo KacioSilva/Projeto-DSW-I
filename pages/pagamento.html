@@ -56,7 +56,8 @@
   <main>
     <div class="container">
       <div class="headerPagamento">
-        <h1>Falta Pouco! <h1> <h3>Finalize a sua Compra!</h3>
+        <h1>Falta Pouco! <h1>
+            <h3>Finalize a sua Compra!</h3>
       </div>
       <div class="pagamento-container">
         <div class="pagamento-header">
@@ -86,21 +87,30 @@
           </div>
         </div>
 
-        <!-- janela modal .produtoWindowArea -->
+        <!-- janela modal .modalWindowArea -->
         <div class="modalWindowArea">
           <div class="modalWindowBody">
-              <div class="modalQrCode">
-                  <img id="QRCodeImage">
-              </div>
-              <div class="chaveAleatoria">
-                <p id="chaveAleatoria"></p>
-              </div>
-              <div class="produtoInfo--cancelMobileButton" onclick="fecharModal()">Cancelar</div>
+            <div id="tipo"></div>
+            <div id="text"></div>
+            <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
           </div>
-      </div>
+        </div>
+
+        <!-- janela modal .pagamentoWindowArea -->
+        <div class="pagamentoWindowArea">
+          <div class="pagamentoWindowBody">
+            <div class="modalQrCode">
+              <img id="QRCodeImage">
+            </div>
+            <div class="chaveAleatoria">
+              <p id="chaveAleatoria"></p>
+            </div>
+            <div class="produtoInfo--cancelMobileButton" onclick="fecharModal()">Cancelar</div>
+          </div>
+        </div>
 
         <form action="" id="formulario">
-        
+
           <div class="pagamento-method">
             <div class="headMetodoPagamento">
               <h2>Método de Pagamento</h2>
@@ -114,7 +124,7 @@
               </div>
             </div>
 
-            <div class="pagamento-options">   <!------opções de pagamento----->
+            <div class="pagamento-options"> <!------opções de pagamento----->
               <i class="fa-regular fa-credit-card"></i>
               <input type="radio" id="cartaoCredito" name="paymentOption" value="cartaoCredito" checked>
               <label for="cartaoCredito">Crédito</label>
@@ -123,16 +133,19 @@
               <label for="pix">Pix</label>
             </div>
 
-            <div id="cartaoCreditoFields">  <!------inputs cartão----->
-              <input type="text" id="numCartao" name="numCartao" placeholder="Número do Cartão" oninput="formatCartao(this)" maxlength="19" required>
-              <input type="text" id="nomeTitular" name="nomeTitular" placeholder="Nome do Titular" oninput="formatNome(this)" required>
-              <input type="text" id="dataValidade" name="dataValidade" placeholder="Data de Validade" oninput="formatDataValidade(this)" maxlength="5" required>
+            <div id="cartaoCreditoFields"> <!------inputs cartão----->
+              <input type="text" id="numCartao" name="numCartao" placeholder="Número do Cartão"
+                oninput="formatCartao(this)" maxlength="19" required>
+              <input type="text" id="nomeTitular" name="nomeTitular" placeholder="Nome do Titular"
+                oninput="formatNome(this)" required>
+              <input type="text" id="dataValidade" name="dataValidade" placeholder="Data de Validade"
+                oninput="formatDataValidade(this)" maxlength="5" required>
               <input type="text" id="cvv" name="cvv" placeholder="CVV" oninput="formatCvv(this)" maxlength="3" required>
             </div>
 
-            <div id="pixFields" style="display: none;">  <!-----inputs pix----->
+            <div id="pixFields" style="display: none;"> <!-----inputs pix----->
               <h3>Opções de Pagamento Pix</h3>
-              <div class="op1">  <!-- opção 1 --->
+              <div class="op1"> <!-- opção 1 --->
                 <input type="radio" id="chavePixOption" name="pixPaymentOption" value="chavePix" checked>
                 <label for="chavePixOption">Pagar com Chave Pix</label>
               </div>
@@ -145,7 +158,8 @@
               <h2>Endereço de Entrega</h2>
               <input type="text" id="cep" name="cep" placeholder="CEP" oninput="formatCep(this)" maxlength="9" required>
               <input type="text" id="rua" name="rua" placeholder="Rua" oninput="formatNome(this)" required>
-              <input type="text" id="numero" name="numero" placeholder="Número" oninput="formatNumero(this)" maxlength="5" required>
+              <input type="text" id="numero" name="numero" placeholder="Número" oninput="formatNumero(this)"
+                maxlength="5" required>
               <input type="text" id="complemento" name="complemento" placeholder="Complemento" maxlength="30">
             </div>
             <div class="error-container">
@@ -158,69 +172,71 @@
   </main>
   <footer>
     <div id="footer_content">
-        <div id="footer_contacts">
-            <h1>Mercado IFPE</h1>
-            <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
+      <div id="footer_contacts">
+        <h1>Mercado IFPE</h1>
+        <p>O Mercado IFPE é uma das melhores lojas para se adquirir o seu eletrônico e acessório.</p>
 
-            <div id="footer_social_media">
-                <a href="#" class="footer-link" id="instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+        <div id="footer_social_media">
+          <a href="#" class="footer-link" id="instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-                <a href="#" class="footer-link" id="facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
+          <a href="#" class="footer-link" id="facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
 
-                <a href="#" class="footer-link" id="whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="#" class="footer-link" id="twitter">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-            </div>
+          <a href="#" class="footer-link" id="whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="footer-link" id="twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
         </div>
-        
-        <ul class="footer-list">
-            <h3>Navegação</h3>
-            <li>
-                <a href="home.html" class="footer-link">Tela Inicial</a>
-            </li>
-            
-            <li>
-                <a href="produtos.html" class="footer-link">Produtos</a>
-            </li>
-            <li>
-                <a href="cadastro.html" class="footer-link">Cadastro</a>
-            </li>
-            <li>
-                <a href="login.html" class="footer-link">Login</a>
-            </li>
-            
-            
-        </ul>
+      </div>
 
-        <ul class="footer-list">
-            <h3>Suporte</h3>
-            <li>
-                <a href="#" class="footer-link">Como Funciona</a>
-            </li>
-            <li>
-                <a class="footer-link" onclick="abrirModal('contato')">Contato</a>
-            </li>
-            <li>
-                <a class="footer-link" onclick="abrirModal('sobre', 'tipo')">Sobre</a>
-            </li>
-        </ul>
+      <ul class="footer-list">
+        <h3>Navegação</h3>
+        <li>
+          <a href="home.html" class="footer-link">Tela Inicial</a>
+        </li>
+
+        <li>
+          <a href="produtos.html" class="footer-link">Produtos</a>
+        </li>
+        <li>
+          <a href="cadastro.html" class="footer-link">Cadastro</a>
+        </li>
+        <li>
+          <a href="login.html" class="footer-link">Login</a>
+        </li>
+
+
+      </ul>
+
+      <ul class="footer-list">
+        <h3>Suporte</h3>
+        <li>
+          <a class="footer-link" onclick="abrirModalInfo('comoFunciona')">Como Funciona</a>
+        </li>
+        <li>
+          <a class="footer-link" onclick="abrirModalInfo('contato')">Contato</a>
+        </li>
+        <li>
+          <a class="footer-link" onclick="abrirModalInfo('sobre')">Sobre</a>
+        </li>
+      </ul>
     </div>
     <div id="footer_copyright">
-        <p>&#169 2023 all rights reserved</p>
+      <p>&#169 2023 all rights reserved</p>
     </div>
-</footer>
+  </footer>
 
   <script src="/script/sideBar.js"></script>
   <script src="/script/transicaoImagens.js"></script>
   <script src="/script/mascara.js"></script>
   <script src="/script/pagamento.js"></script>
   <script src="/script/informacoesGerais.js"></script>
+  <script src="/script/modalTelaInicial.js"></script>
 </body>
+
 </html>

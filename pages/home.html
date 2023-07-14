@@ -69,15 +69,14 @@
                 <l1><img src="/assets/images/imageRow/ipAmarelo.png" onclick="slider('/assets/images/imageGeral/ip-amarelo.png')"> </l1> 
             </div>
         </div>
-        <!-- janela modal .produtoWindowArea -->
+        <!-- janela modal .modalWindowArea -->
         <div class="modalWindowArea">
             <div class="modalWindowBody">
                 <div id="tipo"></div>
                 <div id="text"></div>
-                <div class="produtoInfo--cancelMobileButton" onclick="fecharModal()">Fechar</div>
+                <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
             </div>
         </div>
-  
     </main>
     <footer>
         <div id="footer_content">
@@ -125,13 +124,13 @@
             <ul class="footer-list">
                 <h3>Suporte</h3>
                 <li>
-                    <a href="#" class="footer-link">Como Funciona</a>
+                    <a class="footer-link" onclick="abrirModalInfo('comoFunciona')">Como Funciona</a>
                 </li>
                 <li>
-                    <a class="footer-link" onclick="abrirModal('contato')">Contato</a>
+                    <a class="footer-link" onclick="abrirModalInfo('contato')">Contato</a>
                 </li>
                 <li>
-                    <a class="footer-link" onclick="abrirModal('sobre', 'tipo')">Sobre</a>
+                    <a class="footer-link" onclick="abrirModalInfo('sobre')">Sobre</a>
                 </li>
             </ul>
         </div>

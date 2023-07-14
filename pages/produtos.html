@@ -58,7 +58,14 @@
             <span>0</span>🛒
         </div>
     </header>
-
+    <!-- janela modal .modalWindowArea -->
+    <div class="modalWindowArea">
+        <div class="modalWindowBody">
+            <div id="tipo"></div>
+            <div id="text"></div>
+            <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
+        </div>
+    </div>
 
     <div tabindex="0" class="main" id="main" onclick="closeSidebar()">
         <!-- modelos de produto na lista e no carrinho -->
@@ -182,13 +189,13 @@
                     </a>
                 </div>
             </div>
-            
+
             <ul class="footer-list">
                 <h3>Navegação</h3>
                 <li>
                     <a href="home.html" class="footer-link">Tela Inicial</a>
                 </li>
-                
+
                 <li>
                     <a href="produtos.html" class="footer-link">Produtos</a>
                 </li>
@@ -198,20 +205,20 @@
                 <li>
                     <a href="login.html" class="footer-link">Login</a>
                 </li>
-                
-                
+
+
             </ul>
 
             <ul class="footer-list">
                 <h3>Suporte</h3>
                 <li>
-                    <a href="#" class="footer-link">Como Funciona</a>
+                    <a class="footer-link" onclick="abrirModalInfo('comoFunciona')">Como Funciona</a>
                 </li>
                 <li>
-                    <a class="footer-link" onclick="abrirModal('contato')">Contato</a>
+                    <a class="footer-link" onclick="abrirModalInfo('contato')">Contato</a>
                 </li>
                 <li>
-                    <a class="footer-link" onclick="abrirModal('sobre', 'tipo')">Sobre</a>
+                    <a class="footer-link" onclick="abrirModalInfo('sobre')">Sobre</a>
                 </li>
             </ul>
         </div>
@@ -225,6 +232,7 @@
     <script src="/script/produtos.js"></script>
     <script src="/script/sideBar.js"></script>
     <script src="/script/informacoesGerais.js"></script>
+    <script src="/script/modalTelaInicial.js"></script>
 </body>
 
 </html>
