@@ -5,6 +5,7 @@ const abrirModal = () => {
   document.querySelector('.pagamentoWindowArea').style.display = 'flex'
   setTimeout(() => document.querySelector('.pagamentoWindowArea').style.opacity = 1, 150)
   statusPagamento = true;
+  document.querySelector('.confirmar').style.display = 'none'
 }
 
 
@@ -14,6 +15,8 @@ const fecharModal = () => {
   document.querySelector('.pagamentoWindowArea').style.opacity = 0 // transparente
   setTimeout(() => document.querySelector('.pagamentoWindowArea').style.display = 'none', 500)
   statusPagamento = false;
+  document.querySelector('.confirmar').style.display = 'block'
+
 }
 
 function finalizarCompra() {

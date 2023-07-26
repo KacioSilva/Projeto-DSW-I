@@ -114,6 +114,7 @@ a:hover {
   padding: 20px;
   max-width: 400px;
   text-align: center;
+  
 }
 #text{
   margin-bottom: 2rem;
@@ -174,6 +175,7 @@ a:hover {
 
 .chaveAleatoria {
   margin-bottom: 20px;
+  width: 90%;
 }
 
 #chaveAleatoria {
@@ -315,6 +317,9 @@ input[type="text"] {
   cursor: pointer;
   margin-top: 2rem;
   transition: 0.5s;
+}
+#confirmar{
+  z-index: -1001;
 }
 .confirmar:hover{
   background-color: #429b45;
