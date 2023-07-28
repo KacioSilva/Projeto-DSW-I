@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../assets/estilos/cadastro.css"> 
+    <link rel="stylesheet" href="../assets/estilos/cadastro.css">
     <link rel="shortcut icon" href="../assets/favicon.ico">
 
     <!--IMPORTANDO O ICONEBOX-->
@@ -27,9 +27,11 @@
 <body>
     <header id="header">
         <button class="btnIconHeader" onclick="toogleSidebar()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
         </button>
 
         <div class="logoHeader">
@@ -38,9 +40,11 @@
 
         <div class="navigationHeader" id="navigationHeader">
             <button class="btnIconHeader" onclick="toogleSidebar()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
             </button>
             <a href="produtos.html">Produtos</a>
             <a href="login.html">Login</a>
@@ -48,15 +52,15 @@
             <a onclick="abrirModalInfo('sobre')">Sobre</a>
         </div>
     </header>
-    <div tabindex="0" class="main" id="main" onclick="closeSidebar()">
-         <!-- janela modal .modalWindowArea -->
-         <div class="modalWindowArea">
-            <div class="modalWindowBody">
-                <div id="tipo"></div>
-                <div id="text"></div>
-                <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
-            </div>
+    <!-- janela modal .modalWindowArea -->
+    <div class="modalWindowArea">
+        <div class="modalWindowBody">
+            <div id="tipo"></div>
+            <div id="text"></div>
+            <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
         </div>
+    </div>
+    <div tabindex="0" class="main" id="main" onclick="closeSidebar()">
         <div class="container">
             <div class="formImage">
                 <img src="../assets/images/svg/shopping.svg" alt="">
@@ -76,18 +80,18 @@
                         <div class="inputBox">
                             <label for="nome">Primeiro Nome*</label>
                             <input type="text" id="nome" name="nome" placeholder="Infome o seu Primeiro Nome"
-                            oninput="formatNome(this)" autocomplete="off" required>
+                                oninput="formatNome(this)" autocomplete="off" required>
                         </div>
                         <div class="inputBox">
                             <label for="sobrenome">Sobrenome*</label>
                             <input type="text" id="sobrenome" name="sobrenome" placeholder="Infome o seu Sobrenome"
-                            oninput="formatNome(this)" autocomplete="off" required>
+                                oninput="formatNome(this)" autocomplete="off" required>
                         </div>
 
                         <div class="inputBox">
                             <label for="cpf">CPF*</label>
                             <input type="text" id="cpf" name="cpf" placeholder="Informe o seu CPF"
-                            oninput="formatCPF(this)" maxlength="14"  minlength="8" autocomplete="off" required>
+                                oninput="formatCPF(this)" maxlength="14" minlength="8" autocomplete="off" required>
                         </div>
 
                         <div class="inputBox">
@@ -97,32 +101,32 @@
 
                         <div class="inputBox">
                             <label for="email">Email*</label>
-                            <input type="email" id="email" name="sobrenome" placeholder="Infome o seu Email" 
-                            oninput="formatEmail(this)" autocomplete="off" required>
+                            <input type="email" id="email" name="sobrenome" placeholder="Infome o seu Email"
+                                oninput="formatEmail(this)" autocomplete="off" required>
                         </div>
 
                         <div class="inputBox">
                             <label for="celular">Celular*</label>
-                            <input type="text" id="celular" name="celular" placeholder="Dispositivo Móvel" 
-                            oninput="formatCelular(this)"  maxlength="15" autocomplete="off" required>
+                            <input type="text" id="celular" name="celular" placeholder="Dispositivo Móvel"
+                                oninput="formatCelular(this)" maxlength="15" autocomplete="off" required>
                         </div>
 
                         <div class="inputBox">
                             <label for="telefone">Telefone</label>
                             <input type="text" id="telefone" name="telefone" placeholder="Telefone Fixo"
-                            oninput="formatTelefone(this)" maxlength="14" autocomplete="off">
+                                oninput="formatTelefone(this)" maxlength="14" autocomplete="off">
                         </div>
 
                         <div class="inputBox">
                             <label for="senha">Senha*</label>
-                            <input type="password" id="senha" name="senha" placeholder="Infome a sua Senha" 
-                            autocomplete="off" required>
+                            <input type="password" id="senha" name="senha" placeholder="Infome a sua Senha"
+                                autocomplete="off" required>
                         </div>
 
                         <div class="inputBox">
                             <label for="confSenha">Repita a senha*</label>
-                            <input type="password" id="confSenha" name="confSenha" placeholder="Informe a sua Senha" 
-                            autocomplete="off" required>
+                            <input type="password" id="confSenha" name="confSenha" placeholder="Informe a sua Senha"
+                                autocomplete="off" required>
                         </div>
                     </div>
                     <div class="generoInput">
@@ -153,7 +157,7 @@
                             <p id="erro"></p>
                         </div>
                     </div>
-                   
+
                 </form>
             </div>
         </div>
@@ -181,13 +185,13 @@
                     </a>
                 </div>
             </div>
-            
+
             <ul class="footer-list">
                 <h3>Navegação</h3>
                 <li>
                     <a href="home.html" class="footer-link">Tela Inicial</a>
                 </li>
-                
+
                 <li>
                     <a href="produtos.html" class="footer-link">Produtos</a>
                 </li>
@@ -197,8 +201,8 @@
                 <li>
                     <a href="login.html" class="footer-link">Login</a>
                 </li>
-                
-                
+
+
             </ul>
 
             <ul class="footer-list">

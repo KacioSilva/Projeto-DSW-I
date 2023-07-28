@@ -26,9 +26,11 @@
 <body>
     <header id="header">
         <button class="btnIconHeader" onclick="toogleSidebar()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
         </button>
 
         <div class="logoHeader">
@@ -37,9 +39,11 @@
 
         <div class="navigationHeader" id="navigationHeader">
             <button class="btnIconHeader" onclick="toogleSidebar()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
             </button>
             <a href="produtos.html">Produtos</a>
             <a href="login.html">Login</a>
@@ -47,15 +51,15 @@
             <a onclick="abrirModalInfo('sobre')">Sobre</a>
         </div>
     </header>
-    <div class="main" id="main" tabindex="0" onclick="closeSidebar()">
-         <!-- janela modal .modalWindowArea -->
-         <div class="modalWindowArea">
-            <div class="modalWindowBody">
-                <div id="tipo"></div>
-                <div id="text"></div>
-                <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
-            </div>
+    <!-- janela modal .modalWindowArea -->
+    <div class="modalWindowArea">
+        <div class="modalWindowBody">
+            <div id="tipo"></div>
+            <div id="text"></div>
+            <div class="cancelMobileButton" onclick="fecharModalInfo()">Fechar</div>
         </div>
+    </div>
+    <div class="main" id="main" tabindex="0" onclick="closeSidebar()">
         <div class="mainLogin">
             <div class="rightLogin">
                 <div class="cardLogin">
@@ -72,22 +76,22 @@
 
                             <label for="usuario">Usuário</label>
                             <input type="text" name="usuario" id="usuario" placeholder="Insira o CPF" maxlength="14"
-                            autocomplete="off"  oninput="formatCPF(this)" required> <br>
+                                autocomplete="off" oninput="formatCPF(this)" required> <br>
 
                             <label for="senha">Senha</label>
                             <input type="password" name="senha" id='senha' placeholder="Insira a sua senha" required>
                         </div>
                         <div class="error-container">
                             <div id="error"></div>
-                          </div>   
+                        </div>
                         <button class="btnLogin" type="submit">Entrar</button>
                     </form>
                 </div>
             </div>
             <div class="leftLogin">
-                <h1>Faça o seu Login <br> 
-                <h4>Encontre os melhores produtos</h4>
-                <img src="../assets/images/svg/gif.svg" class="gif" alt="animação compra">
+                <h1>Faça o seu Login <br>
+                    <h4>Encontre os melhores produtos</h4>
+                    <img src="../assets/images/svg/gif.svg" class="gif" alt="animação compra">
             </div>
         </div>
     </div>
@@ -114,13 +118,13 @@
                     </a>
                 </div>
             </div>
-            
+
             <ul class="footer-list">
                 <h3>Navegação</h3>
                 <li>
                     <a href="home.html" class="footer-link">Tela Inicial</a>
                 </li>
-                
+
                 <li>
                     <a href="produtos.html" class="footer-link">Produtos</a>
                 </li>
@@ -130,7 +134,7 @@
                 <li>
                     <a href="login.html" class="footer-link">Login</a>
                 </li>
-                  
+
             </ul>
 
             <ul class="footer-list">
@@ -157,4 +161,5 @@
     <script src="../script/modalTelaInicial.js"></script>
 
 </body>
+
 </html>
