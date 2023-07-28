@@ -94,6 +94,7 @@ a:hover {
   text-decoration: none;
   color: var(--text-color);
 }
+
 /* -----------MODAIS SOBRE, CONTATO E COMO FUNCIONA */
 .modalWindowArea {
   position: fixed;
@@ -116,13 +117,15 @@ a:hover {
   padding: 20px;
   max-width: 400px;
   text-align: center;
-  
+
 }
-#text{
+
+#text {
   margin-bottom: 2rem;
   height: 7rem;
 }
-#tipo{
+
+#tipo {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -136,9 +139,10 @@ a:hover {
   cursor: pointer;
   margin-bottom: 20px;
 }
+
 /* -----------/MODAIS SOBRE, CONTATO E COMO FUNCIONA */
 
-/* ---------- MODAL PAGAMENTO -----------*/ 
+/* ---------- MODAL PAGAMENTO -----------*/
 .pagamentoWindowArea {
   position: fixed;
   top: 0;
@@ -168,7 +172,8 @@ a:hover {
   margin-bottom: 20px;
   transition: 0.5s;
 }
-.produtoInfo--cancelMobileButton:hover{
+
+.produtoInfo--cancelMobileButton:hover {
   background-color: var(--botaoCancelarPagamentoHover);
 }
 
@@ -198,9 +203,10 @@ a:hover {
   cursor: pointer;
 }
 
-.produtoInfo--cancelMobileButton{
+.produtoInfo--cancelMobileButton {
   cursor: pointer;
 }
+
 /*------------------/MODAL PAGAMENTO---------------------------*/
 .container {
   max-width: 600px;
@@ -209,29 +215,33 @@ a:hover {
   border-radius: 5px;
   padding: 20px;
 }
-.headMetodoPagamento{
+
+.headMetodoPagamento {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
-  
+
 }
-.headerPagamento{
+
+.headerPagamento {
   text-align: center;
 }
 
-.headerPagamento h1{
+.headerPagamento h1 {
   font-size: 40px;
 }
-.headerPagamento h3{
+
+.headerPagamento h3 {
   font-size: 20px;
 }
 
-.bandeiras{
+.bandeiras {
   display: block;
   font-size: 2rem;
   margin-left: 2rem;
 }
-.bandeiraPix{
+
+.bandeiraPix {
   display: none;
   font-size: 4rem;
   margin-left: 2rem;
@@ -278,6 +288,7 @@ h1 {
   font-size: 1.5rem;
   color: var(--totalPagamento);
 }
+
 .error-container {
   display: flex;
   justify-content: center;
@@ -285,8 +296,9 @@ h1 {
   flex-direction: column;
   margin-top: 20px;
 }
-#error{
-  color:var(--colorError);
+
+#error {
+  color: var(--colorError);
   font-weight: 700;
 }
 
@@ -312,7 +324,7 @@ input[type="text"] {
   border-radius: 3px;
 }
 
-.confirmar{
+.confirmar {
   display: block;
   width: 100%;
   padding: 10px;
@@ -324,22 +336,25 @@ input[type="text"] {
   margin-top: 2rem;
   transition: 0.5s;
 }
-#confirmar{
+
+#confirmar {
   z-index: -1001;
 }
-.confirmar:hover{
+
+.confirmar:hover {
   background-color: var(--hoverBotao);
   transform: translatey(-5px);
 }
-#formulario{
-    flex-direction: column;
-    z-index: 5;
-    padding-right: 2rem;
-    max-height: 30rem;
-    overflow-y: scroll;
-   
-    flex-wrap: nowrap;
-    margin-left: 2rem;
+
+#formulario {
+  flex-direction: column;
+  z-index: 5;
+  padding-right: 2rem;
+  max-height: 30rem;
+  overflow-y: scroll;
+
+  flex-wrap: nowrap;
+  margin-left: 2rem;
 }
 
 .pagamento-options {
@@ -465,6 +480,7 @@ footer h3 {
     }
   }
 }
+
 /*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
 
 /*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
@@ -478,13 +494,15 @@ footer h3 {
     margin: 0;
   }
 }
+
 /*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
 
-@media (max-width:633px){
-  .headMetodoPagamento h2{
+@media (max-width:633px) {
+  .headMetodoPagamento h2 {
     font-size: 20px;
   }
-  .headMetodoPagamento{
+
+  .headMetodoPagamento {
     flex-direction: column;
     align-items: center;
     justify-content: center;

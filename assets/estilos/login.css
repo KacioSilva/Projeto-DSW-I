@@ -303,6 +303,7 @@ a.btnCadastro {
     cursor: pointer;
 
 }
+
 /* /MODAIS SOBRE, CONTATO E COMO FUNCIONA */
 
 
@@ -368,6 +369,7 @@ footer h3 {
     font-weight: 100;
     background-color: var(--colorCopyright);
 }
+
 /*------------- /FOOTER ---------------*/
 
 /*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
@@ -399,6 +401,7 @@ footer h3 {
         }
     }
 }
+
 /*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
 
 @media screen and (max-width: 1064px) {
@@ -417,7 +420,7 @@ footer h3 {
 }
 
 /*----------RETIRAR A IMAGEM E AJUSTAR OS CAMPOS----------*/
-@media screen and (max-width: 1000px) { 
+@media screen and (max-width: 1000px) {
     .leftLogin {
         display: none;
     }
@@ -435,6 +438,7 @@ footer h3 {
         height: 100%;
     }
 }
+
 /*----------/RETIRAR A IMAGEM E AJUSTAR OS CAMPOS----------*/
 
 /*------------------- MEDIA PARA AJUSTAR O FOOTER----------------*/
@@ -448,6 +452,7 @@ footer h3 {
         margin: 0;
     }
 }
+
 /*---------------/MEDIA PARA AJUSTAR O FOOTER----------------------*/
 
 @media (max-width: 780px) {

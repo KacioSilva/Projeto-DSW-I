@@ -337,6 +337,7 @@ footer h3 {
     cursor: pointer;
     margin-bottom: 20px;
 }
+
 /* /MODAIS SOBRE, CONTATO E COMO FUNCIONA */
 
 
@@ -369,6 +370,7 @@ footer h3 {
         }
     }
 }
+
 /*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
 
 @media (max-width: 1150px) {
@@ -413,6 +415,7 @@ footer h3 {
         margin: 0;
     }
 }
+
 /*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
 
 @media (max-width:780px) {
