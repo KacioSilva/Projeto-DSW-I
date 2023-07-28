@@ -1,9 +1,9 @@
 function slider (anything){
-    document.querySelector ('.ip-14') .src = anything;
+    document.querySelector ('.celularAmostra') .src = anything;
 };
 
-let menu = document.querySelector ('#menu-icon');
-let navbar = document.querySelector ('.navbar');
+let menu = document.querySelector ('.btnIconHeader');
+let navbar = document.querySelector ('.navigationHeader');
 
 menu.onclick = () => {
 menu.classList.toggle ('bx-x');

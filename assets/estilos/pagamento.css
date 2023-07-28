@@ -436,20 +436,6 @@ footer h3 {
   background-color: var(--colorCopyright);
 }
 
-/*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
-@media (max-width: 999px) {
-  #footer_content {
-    grid-template-columns: repeat(1, 2fr);
-    gap: 2rem;
-  }
-
-  .footer-list {
-    margin: 0;
-  }
-}
-
-/*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
-
 /*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
 @media screen and (max-width: 1200px) {
   .btnIconHeader {
@@ -479,6 +465,21 @@ footer h3 {
     }
   }
 }
+/*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
+
+/*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
+@media (max-width: 999px) {
+  #footer_content {
+    grid-template-columns: repeat(1, 2fr);
+    gap: 2rem;
+  }
+
+  .footer-list {
+    margin: 0;
+  }
+}
+/*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
+
 @media (max-width:633px){
   .headMetodoPagamento h2{
     font-size: 20px;

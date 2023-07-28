@@ -314,7 +314,8 @@ footer h3{
 }
 /*------------- /FOOTER ---------------*/
 
-@media screen and (max-width: 1330px) {
+/*----------RETIRAR A IMAGEM E AJUSTAR OS CAMPOS----------*/
+@media screen and (max-width: 1300px) {
     .formImage {
         display: none;
     }
@@ -329,6 +330,32 @@ footer h3{
     }
     
 }
+
+/*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
+@media screen and (max-width: 1200px){
+    .btnIconHeader{
+        display: block;
+
+    }
+    .navigationHeader{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--corNavList);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    @keyframes showSidebar {
+        from{margin-left: -100vw;}
+        top{margin-left: -10vw;}
+    }
+}
+/*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
+
+/*----------/RETIRAR A IMAGEM E AJUSTAR OS CAMPOS----------*/
 @media screen and (max-width: 1064px) {
     .container {
         width: 90%; 
@@ -378,29 +405,7 @@ footer h3{
 }
 /*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
 
-/*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
-@media screen and (max-width: 1200px){
-    .btnIconHeader{
-        display: block;
 
-    }
-    .navigationHeader{
-        position: absolute;
-        flex-direction: column;
-        top: 0;
-        background-color: var(--corNavList);
-        height: 100%;
-        width: 35vw;
-        padding: 1em;
-        animation-duration: 1s;
-        margin-left: -100vw;
-    }
-    @keyframes showSidebar {
-        from{margin-left: -100vw;}
-        top{margin-left: -10vw;}
-    }
-}
-/*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
 @media (max-width:412px) {
     .logo {
         font-size: 22px;
