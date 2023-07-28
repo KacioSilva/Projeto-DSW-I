@@ -8,7 +8,6 @@ let quantprodutos = 1
 let cart = [] // carrinho
 
 
-
 // funcoes auxiliares ou uteis
 const seleciona = (elemento) => document.querySelector(elemento)
 const selecionaTodos = (elemento) => document.querySelectorAll(elemento)
@@ -292,9 +291,6 @@ const finalizarCompra = () => {
         window.location.href = 'pagamento.html';
     })
 }
-
-
-
 
 // MAPEAR produtoJson para gerar lista de produtos
 produtoJson.map((item, index ) => {
