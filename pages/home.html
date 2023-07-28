@@ -1,44 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/estilos/home.css">
     <link rel="shortcut icon" href="../assets/favicon.ico">
     <title>Home</title>
-
     <!--IMPORTANDO O ICONEBOX-->
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-   
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--IMPORTANDO O ICONEBOX-->
-     <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-     <!-------------------------------------IMPORTANDO AS FONTES------------------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <header id="header">
         <button class="btnIconHeader" onclick="toogleSidebar()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
         </button>
-
         <div class="logoHeader">
             <h1><a href="home.html" class="logo"><i class='bx bx-store-alt' id="iconeLoja"></i>Mercado IFPE</a></h1>
         </div>
-
         <div class="navigationHeader" id="navigationHeader">
             <button class="btnIconHeader" onclick="toogleSidebar()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
             </button>
             <a href="produtos.html">Produtos</a>
             <a href="login.html">Login</a>
@@ -60,13 +50,16 @@
         </section>
         <div class="row">
             <div class="row1">
-                <l1><img src="../assets/images/imageRow/ipVermelho.png" onclick="slider('../assets/images/imageProdutos/ip-vermelho.png')"></l1> 
+                <l1><img src="../assets/images/imageRow/ipVermelho.png"
+                        onclick="slider('../assets/images/imageProdutos/ip-vermelho.png')"></l1>
             </div>
             <div class="row2">
-                <l1><img src="../assets/images/imageRow/ipPreto.png" onclick="slider('../assets/images/imageProdutos/ip-preto.png')"> </l1> 
+                <l1><img src="../assets/images/imageRow/ipPreto.png"
+                        onclick="slider('../assets/images/imageProdutos/ip-preto.png')"> </l1>
             </div>
             <div class="row3">
-                <l1><img src="../assets/images/imageRow/ipAmarelo.png" onclick="slider('../assets/images/imageProdutos/ip-amarelo.png')"> </l1> 
+                <l1><img src="../assets/images/imageRow/ipAmarelo.png"
+                        onclick="slider('../assets/images/imageProdutos/ip-amarelo.png')"> </l1>
             </div>
         </div>
         <!-- janela modal .modalWindowArea -->
@@ -101,13 +94,13 @@
                     </a>
                 </div>
             </div>
-            
+
             <ul class="footer-list">
                 <h3>Navegação</h3>
                 <li>
                     <a href="home.html" class="footer-link">Tela Inicial</a>
                 </li>
-                
+
                 <li>
                     <a href="produtos.html" class="footer-link">Produtos</a>
                 </li>
@@ -117,8 +110,8 @@
                 <li>
                     <a href="login.html" class="footer-link">Login</a>
                 </li>
-                
-                
+
+
             </ul>
 
             <ul class="footer-list">
@@ -138,11 +131,12 @@
             <p>&#169 2023 all rights reserved</p>
         </div>
     </footer>
-    
+
 
     <script src="../script/sideBar.js"></script>
     <script src="../script/transicaoImagens.js"></script>
     <script src="../script/modalTelaInicial.js"></script>
     <script src="../script/informacoesGerais.js"></script>
 </body>
+
 </html>
