@@ -4,14 +4,16 @@
     --row1-color: #ff0000;
     --row2-color: #000000;
     --row3-color: #ffff00;
-    --color--footer:#1e211e;
+    --color--footer: #1e211e;
     --corHeader: #1e1e2b;
     --corFundo: #e9e9e9;
     --fundoCompreAgora: transparent;
     --bordaCompreAgora: #000000;
-    --nomeCompreAgora:#000000;
+    --nomeCompreAgora: #000000;
     --corNavList: #23232e;
     --corDescricao: #000000;
+    --colorCopyright: #1e1e2b;
+    --botaoCancelarModal: red;
 }
 
 * {
@@ -27,39 +29,45 @@ a {
     font-size: 15px;
     color: white;
 }
-a:hover{
-    color:var(--azulCiano);
+
+a:hover {
+    color: var(--azulCiano);
 }
+
 main {
     background-size: cover;
     height: 60rem;
 }
 
 header,
-.navigationHeader{
+.navigationHeader {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-header{
+
+header {
     background-color: var(--corHeader);
     box-shadow: 1px 1px 4px var(--azulCiano);
     height: 60px;
     justify-content: space-between;
     padding: 0 10%;
 }
-.navigationHeader{
+
+.navigationHeader {
     gap: 5rem;
     z-index: 10;
 }
-.navigationHeader a{
+
+.navigationHeader a {
     text-decoration: none;
     color: var(--text-color);
     transition: 0.5s;
     height: bold;
     cursor: pointer;
 }
-.btnIconHeader{
+
+.btnIconHeader {
     display: none;
     background-color: transparent;
     border: none;
@@ -70,46 +78,6 @@ header{
 body {
     background-color: var(--corFundo);
 }
-.modalWindowArea {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s ease, transform 0.3s ease;
-    z-index: 1001;
-  }
-  
-  .modalWindowBody {
-    background-color: #fff;
-    border-radius: 8px;
-    height: 15rem;
-    padding: 20px;
-    max-width: 400px;
-    text-align: center;
-  }
-  #text{
-    margin-bottom: 2rem;
-    height: 8rem;
-  }
-  #tipo{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  .cancelMobileButton {
-    background-color: #2797a1;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
 
 a:hover {
     color: var(--azulCiano);
@@ -124,33 +92,37 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
-    color:var(--text-color);
+    color: var(--text-color);
 }
 
 /* ----------------FOOTER-------------*/
-footer{
+footer {
     width: 100%;
     color: var(--text-color);
     background-color: var(--color--footer);
-} 
-footer a{
+}
+
+footer a {
     cursor: pointer;
     color: white;
     text-decoration: none;
 }
 
-footer h1{
+footer h1 {
     display: flex;
-    color:red;
+    color: red;
 }
-footer h3{
-    color:red;
+
+footer h3 {
+    color: red;
 }
-#footer_content{
+
+#footer_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 1.5rem
 }
+
 #footer_contacts h1 {
     margin-bottom: 0.75rem;
 }
@@ -159,14 +131,16 @@ footer h3{
     display: flex;
     gap: 2rem;
     margin-top: 1.5rem;
-} 
+}
 
 #footer_social_media .footer-link i {
-    font-size: 1.50rem;    
+    font-size: 1.50rem;
 }
+
 #footer_social_media .footer-link:hover {
     opacity: 0.8;
 }
+
 .footer-list {
     display: flex;
     flex-direction: column;
@@ -180,69 +154,78 @@ footer h3{
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
-    background-color:#1e1e2b;
+    background-color: var(--colorCopyright);
 }
+
 /* ---------------- /FOOTER -------------*/
 
 
-.main{
+.main {
     display: flex;
     transition: 1s;
-  
-}
-.main a{
-    text-decoration: none;
-}
-.home-text{
-color: var(--corDescricao);
-font-weight: 700;
-margin-left: 52rem;
-margin-top: 20rem;
-letter-spacing: 2;
+
 }
 
-.home-text h1{
+.main a {
+    text-decoration: none;
+}
+
+.home-text {
+    color: var(--corDescricao);
+    font-weight: 700;
+    margin-left: 52rem;
+    margin-top: 20rem;
+    letter-spacing: 2;
+}
+
+.home-text h1 {
     font-size: 40px;
     letter-spacing: 2px;
 }
-.home-text h3{
+
+.home-text h3 {
     font-size: 40px;
     margin-bottom: 35px;
 }
-.home-text h5{
+
+.home-text h5 {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 16px;
 }
-.btn-compre-agora{
+
+.btn-compre-agora {
     display: inline-block;
     padding: 15px 70px;
     background-color: var(--fundoCompreAgora);
     border: solid 2px var(--bordaCompreAgora);
     transition: all.55s ease;
-    color:var(--nomeCompreAgora);
-}
-.btn-compre-agora:hover{
-    transform: translateY(-10px);
-    color:var(--azulCiano);
+    color: var(--nomeCompreAgora);
 }
 
-.imagem-principal{
+.btn-compre-agora:hover {
+    transform: translateY(-10px);
+    color: var(--azulCiano);
+}
+
+.imagem-principal {
     max-width: 100vh;
     width: auto;
     height: auto;
     display: flex;
-    
+
 }
-.ip-14{
-    width:20rem;
+
+.celularAmostra {
+    width: 20rem;
     height: 26rem;
     margin-left: -45rem;
     margin-top: 16rem;
     display: flex;
 }
+
 /*------------ BOTÕES PARA MUDAR A COR DO IPHONE -----------------*/
-.row{
+.row {
     position: absolute;
     top: 530px;
     left: 200px;
@@ -250,14 +233,16 @@ letter-spacing: 2;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
+
 }
-.row li img{
+
+.row li img {
     width: 50px;
     height: auto;
     max-width: 100%;
 }
-.row1{
+
+.row1 {
     background-color: var(--row1-color);
     height: 100px;
     width: 80px;
@@ -267,12 +252,14 @@ letter-spacing: 2;
     display: inline-flex;
     cursor: pointer;
     transition: all.55s ease;
-    
+
 }
+
 .row1:hover {
     transform: translateY(-8px);
 }
-.row2{
+
+.row2 {
     background-color: var(--row2-color);
     height: 100px;
     width: 80px;
@@ -283,10 +270,12 @@ letter-spacing: 2;
     cursor: pointer;
     transition: all.55s ease;
 }
+
 .row2:hover {
     transform: translateY(-8px);
 }
-.row3{
+
+.row3 {
     background-color: var(--row3-color);
     height: 100px;
     width: 80px;
@@ -297,55 +286,68 @@ letter-spacing: 2;
     cursor: pointer;
     transition: all.55s ease;
 }
+
 .row3:hover {
     transform: translateY(-8px);
 }
-/*------------ /BOTÕES PARA MUDAR A COR DO IPHONE -----------------*/
 
-@media (max-width: 1150px){
-    .home-text{
-        margin-left: 2rem;
-    }
-    .home-text h1{
-        font-size: 35px;
-    }
-    .home-text h3{
-        font-size: 35px;
-    }
-    .btn-compre-agora{
-        padding: 15px 50px;
-    }
-    .ip-14{
-        margin-left: 10rem;
-        margin-top: 12rem;
-    }
-    .row{
-        flex-direction: row;
-        top: 800px;
-        left: 440px;
-        align-items: center;
-    }
+/* /BOTÕES PARA MUDAR A COR DO IPHONE -----------------*/
+
+
+/* -----------MODAIS SOBRE, CONTATO E COMO FUNCIONA */
+.modalWindowArea {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    z-index: 1001;
 }
-/*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
-@media (max-width: 999px) {
-    #footer_content {
-        grid-template-columns: repeat(1, 2fr);
-        gap: 2rem;    
-    
-    }
-    .footer-list{
-        margin: 0;
-    }
+
+.modalWindowBody {
+    background-color: #fff;
+    border-radius: 8px;
+    height: 15rem;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
 }
-/*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
+
+#text {
+    margin-bottom: 2rem;
+    height: 8rem;
+}
+
+#tipo {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cancelMobileButton {
+    background-color: var(--botaoCancelarModal);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+/* /MODAIS SOBRE, CONTATO E COMO FUNCIONA */
+
 
 /*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
-@media screen and (max-width: 1200px){
-    .btnIconHeader{
+@media screen and (max-width: 1200px) {
+    .btnIconHeader {
         display: block;
 
     }
-    .navigationHeader{
+
+    .navigationHeader {
         position: absolute;
         flex-direction: column;
         top: 0;
@@ -356,41 +358,97 @@ letter-spacing: 2;
         animation-duration: 1s;
         margin-left: -100vw;
     }
+
     @keyframes showSidebar {
-        from{margin-left: -100vw;}
-        top{margin-left: -10vw;}
+        from {
+            margin-left: -100vw;
+        }
+
+        top {
+            margin-left: -10vw;
+        }
     }
 }
 /*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
 
-@media (max-width:780px){
-    .home-text{
+@media (max-width: 1150px) {
+    .home-text {
+        margin-left: 2rem;
+    }
+
+    .home-text h1 {
+        font-size: 35px;
+    }
+
+    .home-text h3 {
+        font-size: 35px;
+    }
+
+    .btn-compre-agora {
+        padding: 15px 50px;
+    }
+
+    .celularAmostra {
+        margin-left: 10rem;
+        margin-top: 12rem;
+    }
+
+    .row {
+        flex-direction: row;
+        top: 800px;
+        left: 440px;
+        align-items: center;
+    }
+}
+
+/*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/
+@media (max-width: 999px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 2fr);
+        gap: 2rem;
+
+    }
+
+    .footer-list {
+        margin: 0;
+    }
+}
+/*------------------- /MEDIA PARA AJUSTAR O FOOTER----------------*/
+
+@media (max-width:780px) {
+    .home-text {
         margin-left: 2rem;
         margin-top: 30rem;
-        
+
     }
-    .home-text h1{
+
+    .home-text h1 {
         font-size: 16px;
     }
-    .home-text h3{
+
+    .home-text h3 {
         font-size: 30px;
     }
-    .btn-compre-agora{
+
+    .btn-compre-agora {
         padding: 15px 50px;
         font-size: 15px;
     }
-    .ip-14{
+
+    .celularAmostra {
         margin-left: -14rem;
         margin-top: 5rem;
         width: 200px;
         height: 320px;
     }
-    .row{
+
+    .row {
         flex-direction: column;
         top: 320px;
         left: 280px;
-    }   
+    }
 }
+
 @media (max-width:412px) {
     .logo {
         font-size: 22px;

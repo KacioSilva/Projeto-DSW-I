@@ -1,17 +1,19 @@
 :root {
   --text-color: #fff;
   --azulCiano: #34e7f8;
-  --row1-color: #ff0000;
-  --row2-color: #000000;
-  --row3-color: #ffff00;
   --color--footer: #1e211e;
   --corHeader: #1e1e2b;
   --corFundo: #e9e9e9;
-  --fundoCompreAgora: transparent;
-  --bordaCompreAgora: #000000;
-  --nomeCompreAgora: #000000;
+  --colorCopyright: #1e1e2b;
   --corNavList: #23232e;
-  --corDescricao: #000000;
+  --colorBotao: #4CAF50;
+  --hoverBotao: #429b45;
+  --botaoCancelarModal: red;
+  --botaoCancelarPagamento: #f44336;
+  --botaoCancelarPagamentoHover: #eb3326;
+  --colorError: red;
+  --totalPagamento: #4CAF50;
+
 }
 
 * {
@@ -92,7 +94,7 @@ a:hover {
   text-decoration: none;
   color: var(--text-color);
 }
-/* ----- MODAL INFO --------*/
+/* -----------MODAIS SOBRE, CONTATO E COMO FUNCIONA */
 .modalWindowArea {
   position: fixed;
   top: 0;
@@ -127,13 +129,15 @@ a:hover {
 }
 
 .cancelMobileButton {
-  background-color: #2797a1;
+  background-color: var(--botaoCancelarModal);
   color: #fff;
   padding: 10px 20px;
   border-radius: 15px;
   cursor: pointer;
   margin-bottom: 20px;
 }
+/* -----------/MODAIS SOBRE, CONTATO E COMO FUNCIONA */
+
 /* ---------- MODAL PAGAMENTO -----------*/ 
 .pagamentoWindowArea {
   position: fixed;
@@ -156,12 +160,16 @@ a:hover {
 }
 
 .produtoInfo--cancelMobileButton {
-  background-color: #f44336;
+  background-color: var(--botaoCancelarPagamento);
   color: #fff;
   padding: 10px 20px;
   border-radius: 15px;
   cursor: pointer;
   margin-bottom: 20px;
+  transition: 0.5s;
+}
+.produtoInfo--cancelMobileButton:hover{
+  background-color: var(--botaoCancelarPagamentoHover);
 }
 
 .modalQrCode {
@@ -183,7 +191,7 @@ a:hover {
 }
 
 .produtoInfo--cancelButton {
-  background-color: #f44336;
+  background-color: var(--botaoCancelarPagamento);
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
@@ -193,9 +201,7 @@ a:hover {
 .produtoInfo--cancelMobileButton{
   cursor: pointer;
 }
-
-
-/*--------------------------------------------------------------------------------*/
+/*------------------/MODAL PAGAMENTO---------------------------*/
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -270,7 +276,7 @@ h1 {
   font-weight: 800;
   margin-top: 10px;
   font-size: 1.5rem;
-  color: #4CAF50;
+  color: var(--totalPagamento);
 }
 .error-container {
   display: flex;
@@ -280,7 +286,7 @@ h1 {
   margin-top: 20px;
 }
 #error{
-  color:red;
+  color:var(--colorError);
   font-weight: 700;
 }
 
@@ -310,7 +316,7 @@ input[type="text"] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: var(--colorBotao);
   color: #fff;
   border: none;
   border-radius: 15px;
@@ -322,7 +328,7 @@ input[type="text"] {
   z-index: -1001;
 }
 .confirmar:hover{
-  background-color: #429b45;
+  background-color: var(--hoverBotao);
   transform: translatey(-5px);
 }
 #formulario{
@@ -427,7 +433,7 @@ footer h3 {
   font-size: 0.9rem;
   padding: 1.5rem;
   font-weight: 100;
-  background-color: #1e1e2b;
+  background-color: var(--colorCopyright);
 }
 
 /*-------------------MEDIA PARA AJUSTAR O FOOTER----------------*/

@@ -1,21 +1,17 @@
 :root {
     --corFundo: #e9e9e9;
-    --brancoAzulado: #ecf6fc;
     --text-color: #fff;
     --azulCiano: #34e7f8;
     --preto: #000000;
     --colorFooter:#1e211e;
-    --fundoImagem: #EEE;
-    --fundoListaCarrinho: #ffcdd2;
-    --botaoAdicionar: #ff0000;
-    --botaoAdicionarAoCarrinho: #48d05f;
-    --finalizarCompra: #48d05f;
     --corHeader: #1e1e2b;
-    --carrinho: #ecf6fc;
-    --nomeProduto: #000000;
-    --corDescricao: #555;   
-    --corPrice:#333;
     --corNavList: #23232e;
+    --colorBotao: #6c63ff;
+    --botaoHover: #6b63fff1;
+    --fundoImagem: #fde3a7d7;
+    --colorError: red;
+    --colorCopyright: #1e1e2b;
+    --botaoCancelarModal: red;
 }
 *{
     margin: 0;
@@ -102,7 +98,7 @@ header{
   }
   
   .cancelMobileButton {
-    background-color: #2797a1;
+    background-color: var(--botaoCancelarModal);
     color: #fff;
     padding: 10px 20px;
     border-radius: 15px;
@@ -120,7 +116,7 @@ a {
 }
 #erro{
     margin-left: 15rem;
-    color:red;
+    color:var(--colorError);
     transition: 3s;
     font-weight: 500;
     letter-spacing: 1px;
@@ -160,7 +156,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: var(--fundoImagem);
     padding: 1rem;
 }
 .formImage img{
@@ -173,13 +169,13 @@ a:hover {
 }
 .loginButton button{
     border:none;
-    background-color: #6c63ff;
+    background-color: var(--colorBotao);
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 .loginButton button:hover{
-    background-color: #6c63fff1;
+    background-color: var(--botaoHover);
 }
 .loginButton button{
     text-decoration: none;
@@ -191,7 +187,7 @@ a:hover {
     display: block;
     width: 5rem;
     height: 0.3rem;
-    background-color: #6c63ff;
+    background-color: var(--colorBotao);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -253,20 +249,20 @@ h6{
     width: 100%;
     margin-top: 40px;
     border: none;
-    background-color: #6c63ff;
+    background-color: var(--colorBotao);
     padding: 0.62rem;
     border-radius: 10px;
     color: var(--text-color);
 } 
 .continueButton button:hover{
-    background-color: #6b63fff1;
+    background-color: var(--botaoHover);
 }
 
 /*------------- FOOTER ---------------*/
 footer{
     width: 100%;
     color: var(--text-color);
-    background-color: #1e211e;
+    background-color: var(--colorFooter);
 } 
 footer a{
     color: var(--text-color);
@@ -314,7 +310,7 @@ footer h3{
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
-    background-color:#1e1e2b;
+    background-color:var(--colorCopyright);
 }
 /*------------- /FOOTER ---------------*/
 

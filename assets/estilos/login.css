@@ -1,34 +1,33 @@
 :root {
     --corFundo: #e9e9e9;
-    --brancoAzulado: #ecf6fc;
     --text-color: #fff;
     --azulCiano: #34e7f8;
     --preto: #000000;
-    --colorFooter:#1e211e;
-    --fundoImagem: #EEE;
-    --fundoListaCarrinho: #ffcdd2;
-    --botaoAdicionar: #ff0000;
-    --botaoAdicionarAoCarrinho: #48d05f;
-    --finalizarCompra: #48d05f;
+    --colorFooter: #1e211e;
     --corHeader: #1e1e2b;
-    --carrinho: #ecf6fc;
-    --nomeProduto: #000000;
-    --corDescricao: #555;   
-    --corPrice:#333;
     --corNavList: #23232e;
+    --colorBotao: #6c63ff;
+    --hoverBotao: #6b63fff1;
+    --fundoImagem: #fde3a7d7;
+    --colorError: red;
+    --colorCopyright: #1e1e2b;
+    --botaoCancelarModal: red;
 }
-*{
-    margin:0;
+
+* {
+    margin: 0;
     padding: 0;
     font-family: 'Poppins';
     box-sizing: border-box;
 }
-body{
+
+body {
     justify-content: center;
     align-items: center;
     background-color: var(--corFundo);
 }
-.main{
+
+.main {
     width: 100%;
     height: 80rem;
     display: flex;
@@ -36,30 +35,35 @@ body{
     align-items: center;
     background: var(--corFundo);
 }
+
 header,
-.navigationHeader{
+.navigationHeader {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-header{
+
+header {
     background-color: var(--corHeader);
     box-shadow: 1px 1px 4px var(--azulCiano);
     height: 60px;
     justify-content: space-between;
     padding: 0 10%;
 }
-.navigationHeader{
+
+.navigationHeader {
     gap: 5rem;
     z-index: 10;
 }
-.navigationHeader a{
+
+.navigationHeader a {
     text-decoration: none;
     color: var(--text-color);
     transition: 0.5s;
     height: bold;
 }
-.btnIconHeader{
+
+.btnIconHeader {
     display: none;
     background-color: transparent;
     border: none;
@@ -67,14 +71,12 @@ header{
     cursor: pointer;
 }
 
-.mainLogin{
+.mainLogin {
     width: 80%;
     height: 50rem;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(0,0,0, .212);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
 }
-
-/*---------------------------------------------------*/
 
 a {
     color: var(--tex-color);
@@ -105,6 +107,160 @@ main {
     background-size: cover;
     height: 92vh;
 }
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.formHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 3rem;
+}
+
+.formHeader h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--colorBotao);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.formCadastro button {
+    border: none;
+    background-color: var(--colorBotao);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formCadastro button:hover {
+    background-color: var(--hoverBotao);
+}
+
+.leftLogin {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--fundoImagem);
+}
+
+.leftLogin h1 {
+    color: #00ff88;
+    font-size: 3vw;
+}
+
+.leftLogin h4 {
+    color: white;
+    font-size: 1.2vw;
+}
+
+.rightLogin {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardLogin {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.cardLogin h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000000c0;
+    text-transform: uppercase;
+}
+
+.textfield label {
+    color: var(--preto);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.textfield input {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield input:hover {
+    background-color: #eeeeee75;
+
+}
+
+.textfield input::placeholder {
+    color: var(--preto);
+    font-size: 11px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnLogin {
+    width: 70%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2b134b;
+    background-color: var(--colorBotao);
+    ;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #37356d;
+    color: var(--text-color);
+}
+
+.btnLogin:hover {
+    background-color: #6b63fff1;
+}
+
+a.btnCadastro {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.gif {
+    width: 35vw;
+}
+
+#error {
+    color: var(--colorError);
+    font-weight: 700;
+}
+
+/* -----------MODAIS SOBRE, CONTATO E COMO FUNCIONA */
 .modalWindowArea {
     position: fixed;
     top: 0;
@@ -117,190 +273,67 @@ main {
     justify-content: center;
     transition: opacity 0.5s ease, transform 0.3s ease;
     z-index: 1001;
-  }
-  
-  .modalWindowBody {
+}
+
+.modalWindowBody {
     background-color: #fff;
     border-radius: 8px;
     height: 18rem;
     padding: 20px;
     max-width: 400px;
     text-align: center;
-  }
-  #text{
+}
+
+#text {
     margin-bottom: 1rem;
-    
-  }
-  #tipo{
+
+}
+
+#tipo {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 1rem;
-  }
-  
-  .cancelMobileButton {
-    background-color: #2797a1;
+}
+
+.cancelMobileButton {
+    background-color: var(--botaoCancelarModal);
     color: #fff;
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
-    
-  }
-
-.textfield{
-    display:flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin: 10px 0px;
-}
-.formHeader{   
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    gap: 3rem;
-}
-.formHeader h1::after{
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.3rem;
-    background-color: #6c63ff;
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
-}
-.formCadastro button{
-    border:none;
-    background-color: #6c63ff;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.formCadastro button:hover{
-    background-color: #6c63fff1;
-}
-
-.leftLogin{
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fde3a7d7;
-}
-.leftLogin h1{
-    color:#00ff88;
-    font-size: 3vw;
-}
-.leftLogin h4{
-    color: white;
-    font-size: 1.2vw;
-}
-.rightLogin{
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}  
-.cardLogin{
-    width: 80%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
-}
-.cardLogin h1{
-    font-size: 3rem;
-    font-weight: 600;
-    color:#000000c0;
-    text-transform: uppercase;
-}
-.textfield label{
-    color: var(--preto);
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-.textfield input{
-    width: 100%;
-    border:none;
-    border-radius: 15px;
-    padding: 15px;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
-    outline: none;
-    box-sizing: border-box;
-}
-.textfield input:hover{
-    background-color: #eeeeee75;
 
 }
-.textfield input::placeholder{
-    color:var(--preto);
-    font-size: 11px;
-}
-.botoes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-}
-.btnLogin{
-    width: 70%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #2b134b;
-    background-color: #6c63ff;;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #37356d;
-    color:var(--text-color);
-}
-.btnLogin:hover{
-    background-color: #6b63fff1;
-}
+/* /MODAIS SOBRE, CONTATO E COMO FUNCIONA */
 
-a.btnCadastro{
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-}
-.gif{
-    width: 35vw;
-}
-#error{
-    color:red;
-    font-weight: 700;
-}
+
 /*------------- FOOTER ---------------*/
-footer{
+footer {
     width: 100%;
     color: var(--text-color);
-    background-color: #1e211e;
-} 
-footer a{
+    background-color: var(--colorFooter);
+}
+
+footer a {
     color: var(--text-color);
     text-decoration: none;
     cursor: pointer;
 }
-footer h1{
+
+footer h1 {
     display: flex;
-    color:var(--botaoAdicionar);
+    color: var(--botaoAdicionar);
 }
-footer h3{
-    color:var(--botaoAdicionar);
+
+footer h3 {
+    color: var(--botaoAdicionar);
 }
-#footer_content{
+
+#footer_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 1.5rem
 }
+
 #footer_contacts h1 {
     margin-bottom: 0.75rem;
 }
@@ -309,81 +342,42 @@ footer h3{
     display: flex;
     gap: 2rem;
     margin-top: 1.5rem;
-} 
+}
 
 #footer_social_media .footer-link i {
-    font-size: 1.50rem;    
+    font-size: 1.50rem;
 }
+
 #footer_social_media .footer-link:hover {
     opacity: 0.8;
 }
+
 .footer-list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     list-style: none;
     margin-left: 16rem;
-    
+
 }
+
 #footer_copyright {
     display: flex;
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
-    background-color:#1e1e2b;
+    background-color: var(--colorCopyright);
 }
 /*------------- /FOOTER ---------------*/
 
-@media (max-width: 780px){
-  .logo{
-    margin-right: 0;
-  }
-}
-/*------------------- MEDIA PARA AJUSTAR O FOOTER----------------*/
-@media (max-width: 999px) {
-    #footer_content {
-        grid-template-columns: repeat(1, 2fr);
-        gap: 2rem;    
-    }
-    .footer-list{
-        margin: 0;
-    }
-}
-@media screen and (max-width: 1330px) {
-    .leftLogin {
-        display: none;
-    }
-    .mainLogin {
-        width: 50%;
-    }
-    .cardLogin {
-        width: 100%;
-        height: 40rem;
-    }
-    .rightLogin{
-        height: 100%;
-    }
-}
-@media screen and (max-width: 1064px) {
-    .formHeader h1{
-       font-size: 1.2rem;
-    }
-    .mainLogin {
-        width: 100%;
-    }
-
-    .rightLogin{
-        width: 80%;
-        margin-left: 2.5rem;
-    }
-}
 /*------------------- MEDIA PARA AJUSTAR O MENU----------------*/
-@media screen and (max-width: 1200px){
-    .btnIconHeader{
+@media screen and (max-width: 1200px) {
+    .btnIconHeader {
         display: block;
 
     }
-    .navigationHeader{
+
+    .navigationHeader {
         position: absolute;
         flex-direction: column;
         top: 0;
@@ -394,13 +388,74 @@ footer h3{
         animation-duration: 1s;
         margin-left: -100vw;
     }
+
     @keyframes showSidebar {
-        from{margin-left: -100vw;}
-        top{margin-left: -10vw;}
+        from {
+            margin-left: -100vw;
+        }
+
+        top {
+            margin-left: -10vw;
+        }
     }
-    
 }
 /*------------------- /MEDIA PARA AJUSTAR O MENU----------------*/
+
+@media screen and (max-width: 1064px) {
+    .formHeader h1 {
+        font-size: 1.2rem;
+    }
+
+    .mainLogin {
+        width: 100%;
+    }
+
+    .rightLogin {
+        width: 80%;
+        margin-left: 2.5rem;
+    }
+}
+
+/*----------RETIRAR A IMAGEM E AJUSTAR OS CAMPOS----------*/
+@media screen and (max-width: 1000px) { 
+    .leftLogin {
+        display: none;
+    }
+
+    .mainLogin {
+        width: 50%;
+    }
+
+    .cardLogin {
+        width: 100%;
+        height: 40rem;
+    }
+
+    .rightLogin {
+        height: 100%;
+    }
+}
+/*----------/RETIRAR A IMAGEM E AJUSTAR OS CAMPOS----------*/
+
+/*------------------- MEDIA PARA AJUSTAR O FOOTER----------------*/
+@media (max-width: 999px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 2fr);
+        gap: 2rem;
+    }
+
+    .footer-list {
+        margin: 0;
+    }
+}
+/*---------------/MEDIA PARA AJUSTAR O FOOTER----------------------*/
+
+@media (max-width: 780px) {
+    .logo {
+        margin-right: 0;
+    }
+}
+
 @media (max-width:412px) {
     .logo {
         font-size: 22px;

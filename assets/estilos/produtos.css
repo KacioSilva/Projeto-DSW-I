@@ -17,6 +17,8 @@
     --corDescricao: #555;   
     --corPrice:#333;
     --corNavList: #23232e;
+    --botaoCancelarModal: red;
+    --colorCopyright: #1e1e2b;
 }
 
 * {
@@ -156,7 +158,7 @@ aside.show {
   }
   
   .cancelMobileButton {
-    background-color: #2797a1;
+    background-color: var(--botaoCancelarModal);
     color: #fff;
     padding: 10px 20px;
     border-radius: 15px;
@@ -545,7 +547,7 @@ footer h3{
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
-    background-color:#1e1e2b;
+    background-color:var(--colorCopyright);
 }
 /*------------- /FOOTER ---------------*/
 
