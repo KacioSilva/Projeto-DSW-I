@@ -305,11 +305,11 @@ footer a {
 
 footer h1 {
     display: flex;
-    color: var(--botaoAdicionar);
+    color: red;
 }
 
 footer h3 {
-    color: var(--botaoAdicionar);
+    color: red;
 }
 
 #footer_content {
